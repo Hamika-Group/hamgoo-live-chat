@@ -102,7 +102,7 @@ python3 scripts/translations.py
 git diff --exit-code -- languages
 python3 scripts/verify.py
 php scripts/preview.php
-python3 scripts/package.py --tag v1.0.1
+python3 scripts/package.py --tag v1.0.2
 ```
 
 ترجمے کا ماخذ `languages/translations.json` ہے؛ PO/MO/POT بنتے ہیں اور نامکمل ترجمے پر جانچ ناکام ہوتی ہے۔ جامد پیش منظر `docs/*-preview.html` میں ہیں؛ اصل تلاش اور رابطے کے لیے ورڈپریس چاہیے۔
@@ -112,9 +112,9 @@ python3 scripts/package.py --tag v1.0.1
 مرکزی فائل کے Version اور HAMGOO_VERSION، readme.txt کے Stable tag اور ریلیز tag کو یکساں کریں۔ changelog اور جانچ تازہ کرکے commit کریں:
 
 ```sh
-git tag v1.0.1
+git tag v1.0.2
 git push origin main
-git push origin v1.0.1
+git push origin v1.0.2
 ```
 
 [CI](../.github/workflows/ci.yml) کوڈ، ترجمے اور پیکیج جانچتا ہے۔ [Release](../.github/workflows/release.yml) کامیابی پر ZIP اور SHA256SUMS شائع کرتا ہے؛ Actions سے موجودہ مستحکم tag پر دستی اجرا بھی ممکن ہے۔ دوبارہ اجرا اسی ریلیز کی فائلیں تازہ کرتا ہے؛ شائع شدہ tag نہ بدلیں۔ دونوں فائلیں ایک جگہ حاصل کرکے `sha256sum --check SHA256SUMS` چلائیں۔ ZIP میں tests، vendor، ترقیاتی دستاویز یا workflow شامل نہیں۔

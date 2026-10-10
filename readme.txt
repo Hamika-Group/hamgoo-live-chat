@@ -4,7 +4,7 @@ Tags: live chat, customer support, hamgoo, woocommerce, chat
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,7 +43,7 @@ Features:
 * Per-site settings in multisite. No custom database tables.
 * Suggested privacy-policy text and optional settings removal on uninstall.
 
-The plugin panel uses the Hamkaran brand palette and locally bundled Vazirmatn v33.003, licensed under SIL Open Font License 1.1 (assets/fonts/vazirmatn/OFL.txt).
+The panel uses Hamkaran colors and local Vazirmatn v33.003 (SIL Open Font License 1.1; assets/fonts/vazirmatn/OFL.txt).
 Font source: https://github.com/rastikerdar/vazirmatn
 Actual chat colors, text, position, response hours and agent behavior are configured in Hamgoo.
 Bundled translations cover the WordPress plugin; they do not translate the remote chat service.
@@ -145,10 +145,14 @@ Preserve the configured loading and consent rules. The theme must use wp_head() 
 
 == Changelog ==
 
+= 1.0.2 =
+
+* Override WordPress RTL heading fonts in Hamgoo and apply Vazirmatn to its menu title.
+* Load panel styles after WordPress administration styles; preserve icon and code fonts.
+
 = 1.0.1 =
 
-* Bundle Vazirmatn locally for administration text and controls, with its SIL Open Font License.
-* Refresh asset cache versions; load text immediately while the font is loading.
+* Bundle local Vazirmatn with its SIL Open Font License, cache versions and font-display: swap.
 
 = 1.0.0 =
 
@@ -158,10 +162,6 @@ Preserve the configured loading and consent rules. The theme must use wp_head() 
 
 == Upgrade Notice ==
 
-= 1.0.1 =
+= 1.0.2 =
 
-Adds locally bundled Vazirmatn to the Hamgoo administration page. No font CDN is required.
-
-= 1.0.0 =
-
-Initial release. Configure your own widget key and clear page caches after enabling.
+Fixes Arial overriding Hamgoo headings in RTL administration. Update and reload the settings page.

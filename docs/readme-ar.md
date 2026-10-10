@@ -102,7 +102,7 @@ python3 scripts/translations.py
 git diff --exit-code -- languages
 python3 scripts/verify.py
 php scripts/preview.php
-python3 scripts/package.py --tag v1.0.1
+python3 scripts/package.py --tag v1.0.2
 ```
 
 مصدر الترجمة `languages/translations.json`؛ تُنتج PO/MO/POT ويفشل التحقق عند نقص الترجمة. المعاينات الثابتة في `docs/*-preview.html`؛ البحث والاتصال الفعليان يحتاجان ووردبريس.
@@ -112,9 +112,9 @@ python3 scripts/package.py --tag v1.0.1
 وحّد Version وHAMGOO_VERSION في الملف الرئيسي مع Stable tag في readme.txt ووسم الإصدار. حدّث سجل التغييرات والاختبارات، ثم commit:
 
 ```sh
-git tag v1.0.1
+git tag v1.0.2
 git push origin main
-git push origin v1.0.1
+git push origin v1.0.2
 ```
 
 يتحقق [CI](../.github/workflows/ci.yml) من الكود والترجمات والحزمة. ينشر [Release](../.github/workflows/release.yml) ZIP وSHA256SUMS بعد النجاح؛ يمكن تشغيله يدويًا لوسم مستقر موجود. إعادة التشغيل تحدّث ملفات الإصدار نفسه؛ لا تحرّك وسمًا منشورًا. نزّل الملفين معًا وشغّل `sha256sum --check SHA256SUMS`. تُستبعد الاختبارات وvendor والمستندات وworkflow من ZIP.

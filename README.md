@@ -134,7 +134,7 @@ python3 scripts/translations.py
 git diff --exit-code -- languages
 python3 scripts/verify.py
 php scripts/preview.php
-python3 scripts/package.py --tag v1.0.1
+python3 scripts/package.py --tag v1.0.2
 ```
 
 منبع ترجمه `languages/translations.json` است؛ اسکریپت، PO/MO/POT تولید می‌کند و ترجمه ناقص بررسی را شکست می‌دهد. پیش‌نمایش‌های ثابت در `docs/*-preview.html` ساخته می‌شوند؛ اتصال واقعی و جست‌وجو نیازمند وردپرس‌اند.
@@ -155,9 +155,9 @@ wp eval-file tests/wordpress-smoke.php
 2. تغییرات را commit و push و تگ همان commit را ارسال کنید:
 
 ```sh
-git tag v1.0.1
+git tag v1.0.2
 git push origin main
-git push origin v1.0.1
+git push origin v1.0.2
 ```
 
 3. نتیجه را در Actions و Releases بررسی کنید. تگ عمومی را جابه‌جا نکنید. اجرای دوباره همان نسخه، فایل‌های همان Release را به‌روزرسانی می‌کند.

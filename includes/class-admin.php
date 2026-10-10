@@ -42,7 +42,7 @@ class Admin {
 		if ( 'toplevel_page_hamgoo-live-chat' !== $hook ) {
 			return;
 		}
-		wp_enqueue_style( 'hamgoo-admin', HAMGOO_URL . 'assets/css/admin.css', array(), HAMGOO_VERSION );
+		wp_enqueue_style( 'hamgoo-admin', HAMGOO_URL . 'assets/css/admin.css', array( 'wp-admin' ), HAMGOO_VERSION );
 		wp_enqueue_script( 'hamgoo-admin', HAMGOO_URL . 'assets/js/admin.js', array(), HAMGOO_VERSION, true );
 		$settings = Settings::get();
 		wp_localize_script(

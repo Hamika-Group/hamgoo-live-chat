@@ -104,7 +104,7 @@ python3 scripts/translations.py
 git diff --exit-code -- languages
 python3 scripts/verify.py
 php scripts/preview.php
-python3 scripts/package.py --tag v1.0.1
+python3 scripts/package.py --tag v1.0.2
 ```
 
 Translation source: `languages/translations.json`. Generation produces PO/MO/POT and fails on incomplete translations. Static previews are written to `docs/*-preview.html`; real search and connectivity need WordPress.
@@ -114,9 +114,9 @@ Optional integration check: `wp eval-file tests/wordpress-smoke.php`, **only in 
 Keep the main file's Version and HAMGOO_VERSION, readme.txt's Stable tag and release tag consistent. Update the changelog and checks, commit, then:
 
 ```sh
-git tag v1.0.1
+git tag v1.0.2
 git push origin main
-git push origin v1.0.1
+git push origin v1.0.2
 ```
 
 [CI](../.github/workflows/ci.yml) checks code, translations and the packaged plugin. [Release](../.github/workflows/release.yml) publishes the installable ZIP and SHA256SUMS after checks pass. Actions also supports manual runs using an existing stable tag. A rerun updates assets on the same release; never move a published tag. Download both files together and run `sha256sum --check SHA256SUMS`. The ZIP excludes tests, vendor, development docs and workflows.

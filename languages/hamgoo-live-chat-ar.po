@@ -1,6 +1,6 @@
 # Hamgoo Live Chat. GPL-2.0-or-later.
 msgid ""
-msgstr "Project-Id-Version: Hamgoo Live Chat 1.0.1\nReport-Msgid-Bugs-To: https://hamkaran.cloud/\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: ar\nPlural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\nX-Domain: hamgoo-live-chat\n"
+msgstr "Project-Id-Version: Hamgoo Live Chat 1.0.2\nReport-Msgid-Bugs-To: https://hamkaran.cloud/\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: ar\nPlural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\nX-Domain: hamgoo-live-chat\n"
 
 #: includes/class-admin.php:20 includes/class-admin.php:160
 msgid "Hamgoo Live Chat"

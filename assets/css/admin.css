@@ -21,7 +21,9 @@
   color: var(--hg-text);
   font: 400 14px/1.85 "Hamgoo Vazirmatn", -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Arial, sans-serif;
 }
-.hg-app button, .hg-app input, .hg-app select, .hg-app textarea { font-family: inherit; }
+/* WordPress RTL assigns Arial directly to headings; inheritance on .hg-app alone cannot override it. */
+.hg-app :not(.dashicons):not(.hg-key):not(code):not(pre):not(kbd):not(samp),
+#toplevel_page_hamgoo-live-chat .wp-menu-name { font-family: "Hamgoo Vazirmatn", -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Arial, sans-serif; }
 .hg-app *, .hg-app *::before, .hg-app *::after { box-sizing: border-box; }
 .hg-app [hidden] { display: none !important; }
 .hg-app h1, .hg-app h2, .hg-app h3, .hg-app p { margin: 0; }
