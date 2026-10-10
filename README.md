@@ -1,60 +1,179 @@
-# Hamgoo Live Chat
+# Hamgoo Live Chat | همگو
 
-WordPress integration for the Hamkaran cloud live-chat service.
+**چت آنلاین همگو برای وردپرس، با اتصال از طریق کلید ویجت و کنترل محل و زمان بارگذاری.**
 
-The plugin accepts a public widget key and controls page eligibility and loading. Chat design, response hours and conversations remain in the Hamgoo service.
+فارسی · [English](docs/readme-en.md) · [العربية](docs/readme-ar.md) · [Русский](docs/readme-ru.md) · [اردو](docs/readme-ur.md)
 
-The navy/blue administration interface includes English, Persian, Arabic, Russian and Urdu. A plugin-only language choice supports RTL and LTR. The remote chat's language is controlled by the service.
+پنل سرمه‌ای و آبی همکاران، پنج زبان و پشتیبانی راست‌به‌چپ دارد. پیام‌ها، اپراتورها، ظاهر چت و ساعات پاسخ‌گویی در سرویس همگو مدیریت می‌شوند؛ افزونه اتصال و قواعد نمایش را در وردپرس تنظیم می‌کند.
 
-Features include published-content search, public content types, URL paths, exclusions, optional WooCommerce contexts, device targeting, idle/delay/click loading, a consent API, a manual configuration check and opt-in settings cleanup.
+[معرفی، خرید و مشاوره](https://hamkaran.cloud/) · [پنل و پشتیبانی](https://cp.hamkaran.cloud/) · [دانلود نسخه‌ها](https://github.com/Hamika-Group/hamgoo-live-chat/releases) · [گزارش اشکال](https://github.com/Hamika-Group/hamgoo-live-chat/issues)
 
-## Development
+## امکانات
 
-Requires PHP 7.4+, Python 3.9+, Node.js and Composer for development. WordPress runtime requires WordPress 6.5+ and PHP 7.4+; no Composer, Python or Node installation is required on customer sites.
+- اتصال با کلید عمومی ویجت؛ بدون رمز حساب یا توکن خصوصی.
+- پنل اختصاصی با راهنمای نصب، لینک‌های مشاوره و پشتیبانی و بررسی دستی تنظیمات ویجت.
+- نمایش در همه صفحات یا صفحات منتخب؛ جست‌وجوی برگه‌ها و نوشته‌های منتشرشده.
+- انتخاب نوع محتوای عمومی، صفحه اصلی، فهرست نوشته‌ها، آرشیو، جست‌وجو و ۴۰۴.
+- قواعد ووکامرس برای فروشگاه، محصول، آرشیو محصولات، سبد خرید، تسویه‌حساب و حساب کاربری.
+- قواعد مسیر با wildcard و استثناهایی که همیشه بر قواعد نمایش مقدم‌اند.
+- انتخاب موبایل یا دسکتاپ؛ بارگذاری در زمان بیکاری مرورگر، پس از تأخیر یا کلیک کاربر.
+- اتصال به مدیر رضایت سایت و جلوگیری از درخواست سرویس پیش از اجازه.
+- انتخاب زبان پنل افزونه، متن پیشنهادی حریم خصوصی و پاک‌سازی اختیاری هنگام حذف.
 
-    composer install
-    composer lint
-    php tests/run.php
-    node tests/loader.test.js
-    python3 scripts/translations.py
-    python3 scripts/verify.py
-    php scripts/preview.php
+## پیش‌نیازها
 
-Optional integration check, only in a separate disposable WordPress installation with this plugin active:
+| مورد | نیاز |
+| --- | --- |
+| وردپرس | ۶٫۵ یا بالاتر |
+| PHP | ۷٫۴ یا بالاتر |
+| همگو | حساب همکاران، سرویس و ویجت فعال با دامنه مجاز سایت |
+| ووکامرس | اختیاری؛ برای قواعد فروشگاه |
 
-    wp eval-file tests/wordpress-smoke.php
+افزونه رایگان و با مجوز GPL است؛ سرویس ابری ممکن است نیازمند خرید اشتراک باشد. سایت مشتری به Composer، Node.js یا Python نیاز ندارد.
 
-This check writes temporary posts and plugin settings. Never run it on a live/customer site.
+## نصب و راه‌اندازی
 
-Static design previews are generated in docs/ for each language. They use local assets and save nothing; content search and live service tests require WordPress.
+1. از [Releases](https://github.com/Hamika-Group/hamgoo-live-chat/releases) فایل **hamgoo-live-chat-X.Y.Z.zip** را دانلود کنید. فایل‌های خودکار «Source code» گیت‌هاب بسته آماده نصب نیستند.
+2. در وردپرس، «افزونه‌ها ← افزودن افزونه تازه ← بارگذاری افزونه»، ZIP را نصب و فعال کنید.
+3. در [پنل همکاران](https://cp.hamkaran.cloud/)، سرویس همگو را فعال کنید؛ در «تنظیمات همگو ← ویجت» ویجت بسازید و دامنه مجاز سایت را تنظیم کنید.
+4. از منوی «همگو» وردپرس، **فقط کلید ویجت** با پیشوند `cw_` را وارد کنید؛ تگ‌های `<script>` را وارد نکنید.
+5. اتصال به سرویس را بپذیرید، چت را فعال کنید و قواعد نمایش و بارگذاری را ذخیره کنید.
+6. کد نصب قبلی را از قالب، تگ‌منیجر یا افزونه‌های دیگر حذف و کش سایت و CDN را پاک کنید.
+7. روی صفحه مجاز پیام آزمایشی بفرستید؛ دریافت پیام و پاسخ اپراتور را در همگو بررسی کنید.
 
-    python3 scripts/package.py --tag v1.0.0
+بررسی دستی تنظیمات، config ویجت را از مرورگر مدیر دریافت می‌کند. پاسخ موفق به‌تنهایی تأیید دامنه مجاز یا ارسال و دریافت پیام نیست.
 
-The installable artifact is dist/hamgoo-live-chat-1.0.0.zip.
+## قواعد نمایش و ووکامرس
 
-## Consent API
+در حالت «همه صفحات»، صفحه‌های عمومی واجد شرایط‌اند. در «صفحات منتخب»، دست‌کم یک شرط نمایش باید برقرار باشد؛ بدون انتخاب شرط، چت همه‌جا پنهان می‌ماند. شروط نمایش با «یا» ترکیب می‌شوند و **هر استثنا نتیجه را پنهان می‌کند**.
 
-With consent-manager mode enabled, no remote widget is loaded until permission. The plugin does not implement a cookie banner or persist consent. Integrate the site's existing consent manager on each page.
+مسیرها نسبت به آدرس خانه وردپرس هستند؛ هر مسیر در یک خط. پارامترهای query در تطبیق دخالت ندارند.
 
-    // Before the deferred local loader runs:
-    window.HamgooLiveChatConsent = true;
+| نمونه | رفتار |
+| --- | --- |
+| `/contact` | تطبیق با `/contact` و `/contact/` |
+| `/services/*` | زیرمسیرها؛ برای خود `/services` یک قانون جدا بنویسید |
+| `/*` | همه مسیرها |
 
-    // After it runs:
-    window.HamgooLiveChat.grantConsent();
+با ووکامرس فعال، می‌توانید چت را در محصول و فروشگاه نمایش دهید و سبد و تسویه‌حساب را استثنا کنید. برای صفحات سفارشی از انتخاب برگه یا مسیر استفاده کنید. نبود ووکامرس سایر قواعد را مختل نمی‌کند.
 
-    // Withdraw:
-    window.HamgooLiveChatConsent = false;
-    if (window.HamgooLiveChat) window.HamgooLiveChat.revokeConsent();
-    // Reload without granting consent to stop a widget already running.
+در مدیریت، AJAX، REST، cron، feed، embed و پیش‌نمایش، بارگذار درج نمی‌شود.
 
-Alternatively, dispatch the window event hamgoo:consent with detail.granted equal to true or false. A blocked device still cannot load after permission. Consent does not override server-side page exclusions.
+## بارگذاری و عملکرد
 
-## Resources
+| روش | زمان درخواست سرویس |
+| --- | --- |
+| بیکاری مرورگر | پس از آماده‌شدن صفحه و فرصت بیکاری مرورگر |
+| تأخیر | پس از آماده‌شدن صفحه و تأخیر تعیین‌شده |
+| کلیک | پس از کلیک روی دکمه محلی و، در صورت فعال‌بودن، رضایت |
 
-* [Persian release guide](docs/release-fa.md)
-* [Persian artwork brief](docs/artwork-fa.md)
-* [WordPress listing and service disclosure](readme.txt)
-* [Service](https://hamkaran.cloud/)
-* [Customer support panel](https://cp.hamkaran.cloud/)
+دکمه حالت کلیک، سرویس را بارگذاری می‌کند؛ سپس ویجت واقعی جای آن را می‌گیرد. بازشدن خودکار مکالمه تابع تنظیمات همگو است. دستگاه در مرورگر تشخیص داده می‌شود تا با کش صفحه سازگار باشد؛ عرض تا ۷۶۷ پیکسل موبایل محسوب می‌شود.
 
-All source code and bundled SVG illustrations are GPL-2.0-or-later. Additional artwork must have a compatible license.
+کنترل صفحه و زمان اجرا برای مدیریت عملکرد مفید است؛ افزونه متادیتای سئو را تغییر نمی‌دهد و رتبه جست‌وجو یا امتیاز عملکرد را تضمین نمی‌کند.
+
+## رضایت و حریم خصوصی
+
+گزینه انتظار برای رضایت مدیر کوکی را فعال و مدیر رضایت سایت را متصل کنید. افزونه بنر کوکی ندارد و رضایت را ذخیره نمی‌کند؛ اجازه باید در هر صفحه دریافت شود.
+
+```js
+// اگر رضایت پیش از اجرای بارگذار محلی دریافت شده:
+window.HamgooLiveChatConsent = true;
+
+// اگر بارگذار اجرا شده:
+if (window.HamgooLiveChat) window.HamgooLiveChat.grantConsent();
+
+// پس‌گرفتن رضایت:
+window.HamgooLiveChatConsent = false;
+if (window.HamgooLiveChat) window.HamgooLiveChat.revokeConsent();
+// برای توقف ویجت اجراشده، صفحه را بدون اجازه دوباره بارگذاری کنید.
+
+// روش جایگزین پس از اجرای بارگذار:
+window.dispatchEvent(new CustomEvent('hamgoo:consent', {
+  detail: { granted: true }
+}));
+```
+
+رضایت استثناهای صفحه یا محدودیت دستگاه را دور نمی‌زند. لغو رضایت بارگذاری آینده را متوقف می‌کند؛ توقف کامل کد ابری اجراشده به بارگذاری دوباره صفحه بدون اجازه نیاز دارد.
+
+روی صفحه مجاز، پس از شرط بارگذاری و رضایت، `cp.hamkaran.cloud/widget/chat.js` دریافت می‌شود. ویجت از `api.hamkaran.cloud`، دارایی‌های `cp.hamkaran.cloud`، تصاویر و پیوست‌های `storage.s1.hamkaran.cloud`، کلاینت `js.pusher.com` و websocket تعیین‌شده در سرویس استفاده می‌کند.
+
+IP و اطلاعات معمول درخواست در اتصال شبکه آشکار می‌شوند. سرویس ممکن است URL و عنوان صفحه، ارجاع‌دهنده، مرورگر، نشست و داده‌های ارسالی بازدیدکننده مانند نام، تلفن، ایمیل، پیام، وضعیت تایپ، فایل و صوت را پردازش کند. ویجت از localStorage و sessionStorage استفاده می‌کند؛ ضبط صدا نیازمند اجازه میکروفن است. افزونه فقط تنظیمات را در وردپرس نگه می‌دارد؛ صفحه مدیریت خودکار به سرویس درخواست نمی‌فرستد.
+
+جزئیات: [سرویس‌های خارجی](readme.txt)، [حریم خصوصی](https://hamkaran.cloud/privacy-policy/)، [توافق‌نامه](https://hamkaran.cloud/%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D9%86%D8%A7%D9%85%D9%87-%D8%A7%D9%85%D9%86%DB%8C%D8%AA%DB%8C/).
+
+## زبان‌ها، تصاویر و مدیریت داده
+
+پنج زبان در پنل و دکمه محلی موجودند. انتخاب زبان فقط افزونه را تغییر می‌دهد؛ زبان، رنگ، جایگاه، متن خوشامد و ساعات پاسخ‌گویی چت ابری در همگو تنظیم می‌شوند.
+
+SVGهای فعلی محلی و موقت‌اند. برای WebP نهایی و تصاویر مارکت، [راهنمای تصویرسازی فارسی](docs/artwork-fa.md) را ببینید. اسکرین‌شات مارکت باید از نسخه واقعی تهیه شود.
+
+غیرفعال‌سازی تنظیمات را نگه می‌دارد. حذف فقط با گزینه پاک‌سازی، تنظیمات همان سایت را پاک می‌کند؛ مکالمه‌های ابری حذف نمی‌شوند. در وردپرس شبکه هر سایت کلید و تنظیمات مستقل دارد.
+
+## رفع اشکال
+
+- **چت دیده نمی‌شود:** سرویس، کلید، پذیرش اتصال، دامنه، شروط صفحه، استثناها، دستگاه و رضایت/بارگذاری را بررسی کنید.
+- **تغییر دیده نمی‌شود:** کش صفحه و CDN را پاک کنید؛ قالب باید `wp_head()` و `wp_footer()` را اجرا کند.
+- **بهینه‌سازی تداخل دارد:** در صورت نیاز `hamgoo-loader`، `HamgooLiveChatLoader` و `cp.hamkaran.cloud/widget/chat.js` را از ادغام یا تأخیر اضافی مستثنا کنید؛ قواعد رضایت را حفظ کنید.
+- **بررسی دستی خطا دارد:** مرورگر یا CORS می‌تواند مانع دریافت config شود؛ پیام واقعی را هم آزمایش کنید.
+- **ویجت تکراری است:** نصب قبلی را از قالب، تگ‌منیجر یا افزونه دیگر حذف کنید.
+
+پشتیبانی سرویس در [پنل همکاران](https://cp.hamkaran.cloud/) و گزارش اشکال کد در [Issues](https://github.com/Hamika-Group/hamgoo-live-chat/issues) است. رمز، توکن، اطلاعات شخصی یا مکالمه مشتریان را در Issue عمومی قرار ندهید.
+
+## توسعه و بررسی
+
+نیاز توسعه: PHP 7.4+، Composer، Python 3.9+ و Node.js. از ریشه پروژه:
+
+```sh
+composer install --no-interaction
+composer lint
+php tests/run.php
+node --check assets/js/admin.js
+node --check assets/js/loader.js
+node tests/loader.test.js
+python3 scripts/translations.py
+git diff --exit-code -- languages
+python3 scripts/verify.py
+php scripts/preview.php
+python3 scripts/package.py --tag v1.0.0
+```
+
+منبع ترجمه `languages/translations.json` است؛ اسکریپت، PO/MO/POT تولید می‌کند و ترجمه ناقص بررسی را شکست می‌دهد. پیش‌نمایش‌های ثابت در `docs/*-preview.html` ساخته می‌شوند؛ اتصال واقعی و جست‌وجو نیازمند وردپرس‌اند.
+
+بررسی اختیاری، فقط روی وردپرس جداگانه و دورریختنی با افزونه فعال:
+
+```sh
+wp eval-file tests/wordpress-smoke.php
+```
+
+این بررسی نوشته و تنظیمات موقت می‌سازد؛ روی سایت واقعی یا مشتری اجرا نکنید.
+
+## ساخت Release در گیت‌هاب
+
+[CI](.github/workflows/ci.yml) و [Release](.github/workflows/release.yml) نسخه را بررسی و بسته قابل نصب می‌سازند. با ارسال تگ پایدار، ZIP و `SHA256SUMS` در Release منتشر می‌شوند. اجرای دستی از Actions با تگ موجود هم ممکن است.
+
+1. `Version` و `HAMGOO_VERSION` در فایل اصلی و `Stable tag` در `readme.txt` را یکسان کنید؛ changelog و تست‌ها را به‌روز کنید.
+2. تغییرات را commit و push و تگ همان commit را ارسال کنید:
+
+```sh
+git tag v1.0.0
+git push origin main
+git push origin v1.0.0
+```
+
+3. نتیجه را در Actions و Releases بررسی کنید. تگ عمومی را جابه‌جا نکنید. اجرای دوباره همان نسخه، فایل‌های همان Release را به‌روزرسانی می‌کند.
+
+برای بررسی، ZIP و `SHA256SUMS` را در یک پوشه دانلود کنید:
+
+```sh
+sha256sum --check SHA256SUMS
+```
+
+ZIP فقط فایل‌های اجرا، کاتالوگ‌ها و مجوز را دارد؛ تست، vendor، مستندات و workflow همراه آن نصب نمی‌شوند.
+
+## WordPress.org و مجوز
+
+حساب منتشرکننده و شناسه افزونه در WordPress.org هنوز تأیید نشده‌اند؛ `Contributors` تا دریافت نام کاربری واقعی خالی است. CI معمول فقط همین هشدار را هنگام خالی‌بودن آن مستثنا می‌کند؛ انتشار وردپرس بررسی کامل را لازم دارد.
+
+پس از ساخت حساب و پذیرش افزونه، نام کاربری، تصاویر و اسرار SVN را طبق [راهنمای انتشار](docs/release-fa.md) تنظیم کنید. [workflow وردپرس](.github/workflows/wordpress.yml) دستی است و بسته تأییدشده GitHub را با بررسی checksum به SVN می‌فرستد. به‌روزرسانی از WordPress.org انجام می‌شود؛ updater اختصاصی GitHub نداریم.
+
+کد و SVGهای همراه **GPL-2.0-or-later** هستند؛ [مجوز](LICENSE) را ببینید. تصاویر جایگزین باید مجوز سازگار داشته باشند. متن استاندارد مارکت در [readme.txt](readme.txt) نگهداری می‌شود.

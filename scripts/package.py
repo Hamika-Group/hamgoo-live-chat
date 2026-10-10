@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build a deterministic installable ZIP from an explicit runtime allowlist."""
 import argparse
+import hashlib
 import pathlib
 import re
 import zipfile
@@ -51,4 +52,11 @@ def package(tag=None):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--tag")
-    package(parser.parse_args().tag)
+    parser.add_argument("--checksum", action="store_true", help="Write portable SHA256SUMS for this ZIP.")
+    args = parser.parse_args()
+    output = package(args.tag)
+    if args.checksum:
+        digest = hashlib.sha256(output.read_bytes()).hexdigest()
+        checksum = output.parent / "SHA256SUMS"
+        checksum.write_text(digest + "  " + output.name + "\n", encoding="ascii")
+        print(checksum)

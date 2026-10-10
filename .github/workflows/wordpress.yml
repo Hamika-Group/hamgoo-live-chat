@@ -16,7 +16,15 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  quality:
+    uses: ./.github/workflows/ci.yml
+    with:
+      ref: v${{ inputs.version }}
+      wordpress_org: true
+    permissions:
+      contents: read
   deploy:
+    needs: quality
     environment: wordpress-org
     runs-on: ubuntu-latest
     env:
@@ -37,7 +45,7 @@ jobs:
       - name: Download the checked GitHub release
         run: |
           gh release download "v$VERSION" --pattern "$SLUG-$VERSION.zip" --pattern SHA256SUMS --dir dist
-          sha256sum --check dist/SHA256SUMS
+          (cd dist && sha256sum --check SHA256SUMS)
           python3 -c 'import os, zipfile; zipfile.ZipFile("dist/hamgoo-live-chat-" + os.environ["VERSION"] + ".zip").extractall("dist/wordpress")'
       - name: Prepare SVN release
         run: |
