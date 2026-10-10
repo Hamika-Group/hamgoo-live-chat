@@ -43,6 +43,7 @@ jobs:
         run: |
           svn checkout --non-interactive "https://plugins.svn.wordpress.org/$SLUG/" svn
           test ! -e "svn/tags/$VERSION"
+          mkdir -p svn/assets
           rsync -a --delete "dist/wordpress/$SLUG/" svn/trunk/
           if test -f .wordpress-org/banner-772x250.png; then
             rsync -a --exclude=README.md .wordpress-org/ svn/assets/

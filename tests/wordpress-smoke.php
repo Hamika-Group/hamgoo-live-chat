@@ -49,7 +49,8 @@ foreach ( array( 'en_US', 'fa_IR', 'ar', 'ru_RU', 'ur' ) as $locale ) {
 
 Admin::settings();
 do_action( 'admin_init' );
-hamgoo_assert( is_array( WP_Privacy_Policy_Content::get_suggested_policy_text() ), 'Privacy text is registered on admin_init.' );
+$policy = WP_Privacy_Policy_Content::get_suggested_policy_text();
+hamgoo_assert( in_array( 'Hamgoo Live Chat', array_column( $policy, 'plugin_name' ), true ), 'Privacy text is registered on admin_init.' );
 set_current_screen( 'front' );
 $GLOBALS['current_screen'] = null;
 $page = wp_insert_post( array( 'post_title' => 'Hamgoo Smoke Contact', 'post_type' => 'page', 'post_status' => 'publish' ) );
