@@ -123,7 +123,7 @@ msgid "In Hamgoo: Settings → Widget. Copy the key shown beside your widget. On
 msgstr ""
 
 #: includes/class-admin.php:190
-msgid "I accept connecting this site to the Hamkaran chat service."
+msgid "I accept connecting this site to Hamkaran chat and displaying its branding link inside the chat widget."
 msgstr ""
 
 #: includes/class-admin.php:190

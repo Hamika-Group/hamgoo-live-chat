@@ -88,6 +88,12 @@ jobs:
           if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
             gh release upload "$RELEASE_TAG" "$ZIP" dist/SHA256SUMS --clobber
           else
-            gh release create "$RELEASE_TAG" "$ZIP" dist/SHA256SUMS \
-              --verify-tag --title "Hamgoo Live Chat $RELEASE_TAG" --generate-notes
+            NOTES="docs/release-notes/${RELEASE_TAG#v}.md"
+            if test -f "$NOTES"; then
+              gh release create "$RELEASE_TAG" "$ZIP" dist/SHA256SUMS \
+                --verify-tag --title "Hamgoo Live Chat $RELEASE_TAG" --notes-file "$NOTES"
+            else
+              gh release create "$RELEASE_TAG" "$ZIP" dist/SHA256SUMS \
+                --verify-tag --title "Hamgoo Live Chat $RELEASE_TAG" --generate-notes
+            fi
           fi

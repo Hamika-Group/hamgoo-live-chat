@@ -123,8 +123,8 @@ msgid "In Hamgoo: Settings → Widget. Copy the key shown beside your widget. On
 msgstr "ہمگو میں ترتیبات ← ویجٹ کھولیں اور ویجٹ کے ساتھ دکھائی گئی کلید نقل کریں۔ یہاں صرف cw_… کی قدر درج کریں۔"
 
 #: includes/class-admin.php:190
-msgid "I accept connecting this site to the Hamkaran chat service."
-msgstr "میں اس ویب سائٹ کو ہمکاران چیٹ سروس سے جوڑنے کی اجازت دیتا ہوں۔"
+msgid "I accept connecting this site to Hamkaran chat and displaying its branding link inside the chat widget."
+msgstr "میں اس سائٹ کو ہمکاران چیٹ سے جوڑنے اور چیٹ ویجٹ میں سروس کا تعارفی لنک دکھانے کی اجازت دیتا ہوں۔"
 
 #: includes/class-admin.php:190
 msgid "The widget contacts an external service and processes visitor information when loaded. Read the privacy details before enabling."

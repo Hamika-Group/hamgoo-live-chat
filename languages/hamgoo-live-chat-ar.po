@@ -123,8 +123,8 @@ msgid "In Hamgoo: Settings → Widget. Copy the key shown beside your widget. On
 msgstr "في همگو، افتح الإعدادات ← الودجت وانسخ المفتاح بجانب الودجت. أدخل هنا قيمة cw_… فقط."
 
 #: includes/class-admin.php:190
-msgid "I accept connecting this site to the Hamkaran chat service."
-msgstr "أوافق على ربط هذا الموقع بخدمة دردشة همکاران."
+msgid "I accept connecting this site to Hamkaran chat and displaying its branding link inside the chat widget."
+msgstr "أوافق على ربط هذا الموقع بدردشة همکاران وعرض رابط التعريف بالخدمة داخل ودجت الدردشة."
 
 #: includes/class-admin.php:190
 msgid "The widget contacts an external service and processes visitor information when loaded. Read the privacy details before enabling."

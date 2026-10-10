@@ -187,7 +187,7 @@ class Admin {
 							<label class="hg-label" for="hg-widget-key"><?php esc_html_e( 'Widget key', 'hamgoo-live-chat' ); ?></label>
 							<input class="hg-key" id="hg-widget-key" name="<?php echo esc_attr( self::field( 'widget_key' ) ); ?>" type="text" value="<?php echo esc_attr( $s['widget_key'] ); ?>" placeholder="cw_…" dir="ltr" autocomplete="off" spellcheck="false" maxlength="35" aria-describedby="hg-key-help" />
 							<p id="hg-key-help" class="hg-hint"><?php esc_html_e( 'In Hamgoo: Settings → Widget. Copy the key shown beside your widget. Only the cw_… value belongs here.', 'hamgoo-live-chat' ); ?></p>
-							<?php self::toggle( 'service_consent', __( 'I accept connecting this site to the Hamkaran chat service.', 'hamgoo-live-chat' ), $s, __( 'The widget contacts an external service and processes visitor information when loaded. Read the privacy details before enabling.', 'hamgoo-live-chat' ) ); ?>
+							<?php self::toggle( 'service_consent', __( 'I accept connecting this site to Hamkaran chat and displaying its branding link inside the chat widget.', 'hamgoo-live-chat' ), $s, __( 'The widget contacts an external service and processes visitor information when loaded. Read the privacy details before enabling.', 'hamgoo-live-chat' ) ); ?>
 							<div class="hg-inline-links"><?php self::external_link( Settings::PRIVACY, __( 'Service privacy policy', 'hamgoo-live-chat' ) ); ?><?php self::external_link( Settings::TERMS, __( 'Service agreement', 'hamgoo-live-chat' ) ); ?></div>
 							<hr />
 							<?php self::toggle( 'enabled', __( 'Enable live chat', 'hamgoo-live-chat' ), $s, __( 'Requires a valid saved key and acceptance of the service connection.', 'hamgoo-live-chat' ) ); ?>

@@ -15,6 +15,13 @@ Connect Hamgoo chat with a widget key. Control pages, WooCommerce rules and load
 Hamgoo Live Chat connects a WordPress website to the Hamkaran cloud chat service.
 Your team handles conversations in the Hamkaran panel. The plugin manages installation, page rules and loading.
 
+This is the integration for the Hamgoo service, not a general-purpose script editor.
+It connects visitors to your Hamgoo team's conversations and replies, with WordPress page and WooCommerce rules, consent integration and five plugin languages.
+All page rules, loading modes, languages and consent features included in this plugin are available without a plugin license or upgrade.
+The widget key identifies a real hosted chat service; it is not used to unlock local plugin features.
+
+Source code and development instructions: https://github.com/Hamika-Group/hamgoo-live-chat
+
 An active Hamgoo service, a Hamkaran account and an active widget key are required for live chat.
 The WordPress plugin itself is free; the connected cloud service may require payment.
 Visit https://hamkaran.cloud/ for service information, purchase options and consultation.
@@ -45,6 +52,10 @@ Bundled translations cover the WordPress plugin; they do not translate the remot
 
 This plugin relies on the Hamkaran cloud service to provide live chat. After the administrator saves a valid key, accepts the service connection and enables chat, an eligible page receives a small local loader.
 The loader requests https://cp.hamkaran.cloud/widget/chat.js only after the configured loading condition and, when enabled, consent.
+This fixed HTTPS script is the client of the documented hosted chat service.
+The plugin cannot accept arbitrary JavaScript, PHP, script URLs or install executable code into WordPress.
+The hosted widget can show a "powered by hamkaran.cloud" link inside the chat.
+The service-connection checkbox explicitly asks the administrator's permission to show that branding link before chat is enabled.
 
 The hosted widget uses:
 
