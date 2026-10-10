@@ -62,6 +62,19 @@ jobs:
 
   plugin-check:
     runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_ROOT_PASSWORD: hamgoo-ci-only
+          MYSQL_DATABASE: hamgoo_ci
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -phamgoo-ci-only"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=10
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -79,14 +92,43 @@ jobs:
             echo "::warning::WordPress.org publisher account is pending; exempting only readme_invalid_contributors."
             echo "ignore_code=readme_invalid_contributors" >> "$GITHUB_OUTPUT"
           fi
-      - name: Build exact distribution
+      - uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # 2.40.0
+        with:
+          php-version: '8.3'
+          extensions: mysqli
+          coverage: none
+          tools: wp-cli:2.12.0
+      - name: Build exact distribution and prepare disposable WordPress
         run: |
           python3 scripts/package.py
-          python3 -c 'from pathlib import Path; import zipfile; z=next(Path("dist").glob("*.zip")); zipfile.ZipFile(z).extractall("dist/check")'
-      - uses: WordPress/plugin-check-action@10857da14b6c2246d15402b3e69f777edcf8c12e # v1.1.9
+          WP_PATH="$RUNNER_TEMP/hamgoo-wordpress"
+          echo "WP_PATH=$WP_PATH" >> "$GITHUB_ENV"
+          wp core download --path="$WP_PATH"
+          wp config create --path="$WP_PATH" --dbname=hamgoo_ci --dbuser=root \
+            --dbpass=hamgoo-ci-only --dbhost=127.0.0.1:3306
+          wp core install --path="$WP_PATH" --url=http://localhost --title=Hamgoo-CI \
+            --admin_user=hamgoo_ci --admin_password=temporary-ci-only \
+            --admin_email=ci@example.org --skip-email
+          # Fetch outside WordPress's HTTP URL validator, then install the official local ZIP.
+          curl --fail --location --retry 3 https://downloads.wordpress.org/plugin/plugin-check.latest-stable.zip \
+            --output "$RUNNER_TEMP/plugin-check.zip"
+          wp plugin install "$RUNNER_TEMP/plugin-check.zip" --activate --path="$WP_PATH"
+          wp plugin install dist/hamgoo-live-chat-*.zip --activate --path="$WP_PATH"
+      - name: Official Plugin Check on the installable package
+        env:
+          IGNORE_CODE: ${{ steps.listing.outputs.ignore_code }}
+        run: |
+          CHECK_ARGS=(--format=json --require="$WP_PATH/wp-content/plugins/plugin-check/cli.php")
+          if test -n "$IGNORE_CODE"; then
+            CHECK_ARGS+=("--ignore-codes=$IGNORE_CODE")
+          fi
+          wp plugin check hamgoo-live-chat --path="$WP_PATH" "${CHECK_ARGS[@]}" \
+            | tee "$RUNNER_TEMP/plugin-check-results.txt"
+          python3 scripts/plugin-check-report.py "$RUNNER_TEMP/plugin-check-results.txt"
+      - name: Keep Plugin Check report
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          build-dir: dist/check/hamgoo-live-chat
-          wp-version: latest
-          ignore-errors: false
-          ignore-warnings: false
-          ignore-codes: ${{ steps.listing.outputs.ignore_code }}
+          name: plugin-check-results
+          path: ${{ runner.temp }}/plugin-check-results.txt
+          if-no-files-found: ignore

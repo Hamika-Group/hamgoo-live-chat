@@ -3,12 +3,31 @@
 import hashlib
 import pathlib
 import re
+import runpy
 import shutil
 import subprocess
 import tempfile
 import unittest
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
+FINDINGS = runpy.run_path(str(ROOT / "scripts/plugin-check-report.py"))["findings"]
+
+
+class PluginCheckReportTests(unittest.TestCase):
+    def test_errors_and_warnings_remain_blocking(self):
+        report = 'FILE: readme.txt\n[{"type":"WARNING","code":"listing","message":"Fix listing"}]\n'
+        report += 'FILE: includes/settings.php\n[{"type":"ERROR","code":"security","message":"Fix security"}]\n'
+        self.assertEqual([message["type"] for _, message in FINDINGS(report)], ["WARNING", "ERROR"])
+
+    def test_clean_report_has_no_findings(self):
+        self.assertEqual(FINDINGS(""), [])
+        self.assertEqual(FINDINGS("FILE: readme.txt\n[]\n"), [])
+
+    def test_malformed_report_cannot_pass(self):
+        with self.assertRaises(ValueError):
+            FINDINGS("FILE: readme.txt\nbroken-json\n")
+        with self.assertRaises(ValueError):
+            FINDINGS('[{"type":"ERROR","code":"security","message":"Missing file header"}]')
 
 
 class ReleasePackageTests(unittest.TestCase):
