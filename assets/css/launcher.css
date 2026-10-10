@@ -1,0 +1,19 @@
+.hamgoo-launcher {
+  position: fixed;
+  inset-inline-end: 24px;
+  bottom: 24px;
+  z-index: 2147483646;
+  max-width: min(320px, calc(100vw - 48px));
+  border: 1px solid #1b5c9e;
+  border-radius: 999px;
+  padding: 15px 24px;
+  background: #00325a;
+  color: #fff;
+  box-shadow: 0 6px 24px rgb(0 50 90 / 20%);
+  font: 600 15px/1.6 system-ui, sans-serif;
+  cursor: pointer;
+  text-align: center;
+}
+.hamgoo-launcher:hover { background: #1b5c9e; color: #fff; }
+.hamgoo-launcher:focus-visible { outline: 3px solid #3086db; outline-offset: 4px; }
+.hamgoo-launcher:disabled { cursor: wait; opacity: .8; }

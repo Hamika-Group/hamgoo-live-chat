@@ -1,0 +1,56 @@
+name: Publish approved WordPress.org release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Stable version already released on GitHub (example: 1.0.0)'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wordpress-org
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment: wordpress-org
+    runs-on: ubuntu-latest
+    env:
+      VERSION: ${{ inputs.version }}
+      SVN_USERNAME: ${{ secrets.WORDPRESS_SVN_USERNAME }}
+      SVN_PASSWORD: ${{ secrets.WORDPRESS_SVN_PASSWORD }}
+      SLUG: hamgoo-live-chat
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Validate release input
+        run: |
+          [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || exit 1
+          test -n "$SVN_USERNAME" && test -n "$SVN_PASSWORD"
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: v${{ inputs.version }}
+          persist-credentials: false
+      - name: Download the checked GitHub release
+        run: |
+          gh release download "v$VERSION" --pattern "$SLUG-$VERSION.zip" --pattern SHA256SUMS --dir dist
+          sha256sum --check dist/SHA256SUMS
+          python3 -c 'import os, zipfile; zipfile.ZipFile("dist/hamgoo-live-chat-" + os.environ["VERSION"] + ".zip").extractall("dist/wordpress")'
+      - name: Prepare SVN release
+        run: |
+          svn checkout --non-interactive "https://plugins.svn.wordpress.org/$SLUG/" svn
+          test ! -e "svn/tags/$VERSION"
+          rsync -a --delete "dist/wordpress/$SLUG/" svn/trunk/
+          if test -f .wordpress-org/banner-772x250.png; then
+            rsync -a --exclude=README.md .wordpress-org/ svn/assets/
+          fi
+          svn add --force svn/trunk svn/assets
+          svn status --xml svn | python3 scripts/svn-remove-missing.py
+          svn copy svn/trunk "svn/tags/$VERSION"
+          svn status svn
+      - name: Publish to WordPress.org
+        run: |
+          svn commit svn --non-interactive --no-auth-cache --username "$SVN_USERNAME" --password "$SVN_PASSWORD" -m "Release $VERSION"

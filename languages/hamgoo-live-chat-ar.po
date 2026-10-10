@@ -1,0 +1,631 @@
+# Hamgoo Live Chat. GPL-2.0-or-later.
+msgid ""
+msgstr "Project-Id-Version: Hamgoo Live Chat 1.0.0\nReport-Msgid-Bugs-To: https://hamkaran.cloud/\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: ar\nPlural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\nX-Domain: hamgoo-live-chat\n"
+
+#: includes/class-admin.php:20 includes/class-admin.php:160
+msgid "Hamgoo Live Chat"
+msgstr "همگو — الدردشة المباشرة"
+
+#: includes/class-admin.php:20
+msgid "Hamgoo"
+msgstr "همگو"
+
+#: includes/class-admin.php:37
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: includes/class-admin.php:55
+msgid "Checking service configuration…"
+msgstr "جارٍ فحص إعدادات الخدمة…"
+
+#: includes/class-admin.php:56
+msgid "Configuration received. Open your website and send a test message to verify the full connection and allowed domain."
+msgstr "تم استلام الإعدادات. افتح موقعك وأرسل رسالة تجريبية للتحقق من الاتصال الكامل والنطاق المسموح."
+
+#: includes/class-admin.php:57
+msgid "The service refused this request. Check the subscription, widget status and allowed domain in Hamgoo."
+msgstr "رفضت الخدمة هذا الطلب. تحقق من الاشتراك وحالة الودجت والنطاق المسموح في همگو."
+
+#: includes/class-admin.php:58
+msgid "Widget not found. Check the saved key and whether the widget is active."
+msgstr "لم يتم العثور على الودجت. تحقق من المفتاح المحفوظ ومن تفعيل الودجت."
+
+#: includes/class-admin.php:59
+msgid "The check could not complete. Check your network, browser privacy settings and service availability."
+msgstr "تعذر إكمال الفحص. تحقق من الشبكة وإعدادات خصوصية المتصفح وتوفر الخدمة."
+
+#: includes/class-admin.php:60
+msgid "No published content found."
+msgstr "لم يتم العثور على محتوى منشور."
+
+#: includes/class-admin.php:61
+msgid "Search failed. Reload the page and try again."
+msgstr "تعذر البحث. أعد تحميل الصفحة وحاول مرة أخرى."
+
+#: includes/class-admin.php:62 includes/class-admin.php:132
+msgid "Remove"
+msgstr "إزالة"
+
+#: includes/class-admin.php:63
+msgid "You have unsaved changes."
+msgstr "لديك تغييرات غير محفوظة."
+
+#: includes/class-admin.php:64 includes/class-admin.php:315
+msgid "All settings are saved."
+msgstr "تم حفظ جميع الإعدادات."
+
+#: includes/class-admin.php:122
+msgid "Search by title (at least 2 characters)"
+msgstr "ابحث بالعنوان؛ حرفان على الأقل"
+
+#: includes/class-admin.php:161
+msgid "Enabled on eligible pages"
+msgstr "مفعّل في الصفحات المسموح بها"
+
+#: includes/class-admin.php:161
+msgid "Chat is disabled"
+msgstr "الدردشة معطّلة"
+
+#: includes/class-admin.php:161 includes/class-admin.php:297
+msgid "Open Hamgoo panel"
+msgstr "فتح لوحة همگو"
+
+#: includes/class-admin.php:166
+msgid "Plugin sections"
+msgstr "أقسام الإضافة"
+
+#: includes/class-admin.php:169
+msgid "Connect & start"
+msgstr "الاتصال والبدء"
+
+#: includes/class-admin.php:170
+msgid "Display rules"
+msgstr "قواعد العرض"
+
+#: includes/class-admin.php:171
+msgid "Loading & privacy"
+msgstr "التحميل والخصوصية"
+
+#: includes/class-admin.php:172
+msgid "Guide & support"
+msgstr "الدليل والدعم"
+
+#: includes/class-admin.php:182
+msgid "A conversation starts here"
+msgstr "هنا تبدأ المحادثة"
+
+#: includes/class-admin.php:182
+msgid "Be there when customers need you."
+msgstr "كن حاضرًا عندما يحتاجك عملاؤك."
+
+#: includes/class-admin.php:182
+msgid "Connect your website to Hamgoo. Your team replies from the Hamkaran panel, and you decide where chat appears."
+msgstr "اربط موقعك بهمگو. يرد فريقك من لوحة همکاران، وأنت تحدد مكان ظهور الدردشة."
+
+#: includes/class-admin.php:182
+msgid "I have a widget key"
+msgstr "لديّ مفتاح الودجت"
+
+#: includes/class-admin.php:186
+msgid "Connect your widget"
+msgstr "توصيل الودجت"
+
+#: includes/class-admin.php:186
+msgid "One key. No installation scripts or panel password."
+msgstr "مفتاح واحد؛ دون سكربت تثبيت أو كلمة مرور اللوحة."
+
+#: includes/class-admin.php:187
+msgid "Widget key"
+msgstr "مفتاح الودجت"
+
+#: includes/class-admin.php:189
+msgid "In Hamgoo: Settings → Widget. Copy the key shown beside your widget. Only the cw_… value belongs here."
+msgstr "في همگو، افتح الإعدادات ← الودجت وانسخ المفتاح بجانب الودجت. أدخل هنا قيمة cw_… فقط."
+
+#: includes/class-admin.php:190
+msgid "I accept connecting this site to the Hamkaran chat service."
+msgstr "أوافق على ربط هذا الموقع بخدمة دردشة همکاران."
+
+#: includes/class-admin.php:190
+msgid "The widget contacts an external service and processes visitor information when loaded. Read the privacy details before enabling."
+msgstr "يتصل الودجت بخدمة خارجية ويعالج معلومات الزائر عند تحميله. اقرأ تفاصيل الخصوصية قبل التفعيل."
+
+#: includes/class-admin.php:191 includes/class-settings.php:108
+msgid "Service privacy policy"
+msgstr "سياسة خصوصية الخدمة"
+
+#: includes/class-admin.php:191 includes/class-admin.php:317
+msgid "Service agreement"
+msgstr "اتفاقية الخدمة"
+
+#: includes/class-admin.php:193
+msgid "Enable live chat"
+msgstr "تفعيل الدردشة المباشرة"
+
+#: includes/class-admin.php:193
+msgid "Requires a valid saved key and acceptance of the service connection."
+msgstr "يتطلب مفتاحًا صالحًا محفوظًا والموافقة على اتصال الخدمة."
+
+#: includes/class-admin.php:194
+msgid "Check saved widget configuration"
+msgstr "فحص إعدادات الودجت المحفوظ"
+
+#: includes/class-admin.php:194
+msgid "Open website to test"
+msgstr "فتح الموقع للاختبار"
+
+#: includes/class-admin.php:195
+msgid "This check makes a request only when clicked, using the saved key. It checks configuration, not message delivery."
+msgstr "يرسل هذا الفحص طلبًا عند النقر فقط باستخدام المفتاح المحفوظ. يفحص الإعدادات وليس تسليم الرسائل."
+
+#: includes/class-admin.php:199
+msgid "New to Hamgoo?"
+msgstr "هل أنت جديد على همگو؟"
+
+#: includes/class-admin.php:199
+msgid "Give your customers a direct line to your team."
+msgstr "امنح عملاءك وسيلة مباشرة للتواصل مع فريقك."
+
+#: includes/class-admin.php:199
+msgid "An active Hamgoo service and a widget created in your account are required. Visit Hamkaran to learn about the service, purchase options and consultation."
+msgstr "يلزم اشتراك همگو نشط وودجت مُنشأ في حسابك. زر موقع همکاران للتعرف على الخدمة وخيارات الشراء والاستشارة."
+
+#: includes/class-admin.php:199
+msgid "Explore service & purchase"
+msgstr "استكشاف الخدمة والشراء"
+
+#: includes/class-admin.php:199
+msgid "Get consultation"
+msgstr "طلب استشارة"
+
+#: includes/class-admin.php:203
+msgid "Plugin language"
+msgstr "لغة الإضافة"
+
+#: includes/class-admin.php:204
+msgid "Administration language"
+msgstr "لغة لوحة الإدارة"
+
+#: includes/class-admin.php:208
+msgid "Follow WordPress user language"
+msgstr "اتباع لغة مستخدم ووردبريس"
+
+#: includes/class-admin.php:218
+msgid "Changes only this plugin panel. Save to apply. Chat appearance and messages are managed in Hamgoo."
+msgstr "يغيّر لغة لوحة هذه الإضافة فقط. احفظ لتطبيق التغيير. تُدار هيئة الدردشة ورسائلها في همگو."
+
+#: includes/class-admin.php:222
+msgid "The right pages, the right moment"
+msgstr "الصفحات المناسبة في الوقت المناسب"
+
+#: includes/class-admin.php:222
+msgid "Choose where chat appears."
+msgstr "اختر مكان ظهور الدردشة."
+
+#: includes/class-admin.php:222
+msgid "Excluded pages never receive the chat loader. Exclusions always override inclusions."
+msgstr "لا تتلقى الصفحات المستثناة ملف تحميل الدردشة. تتقدم الاستثناءات دائمًا على قواعد التضمين."
+
+#: includes/class-admin.php:224
+msgid "Display scope"
+msgstr "نطاق العرض"
+
+#: includes/class-admin.php:226
+msgid "All public pages"
+msgstr "جميع الصفحات العامة"
+
+#: includes/class-admin.php:226
+msgid "Show throughout the website, except your exclusions."
+msgstr "العرض في الموقع كله، باستثناء ما تحدده."
+
+#: includes/class-admin.php:227
+msgid "Selected pages only"
+msgstr "الصفحات المختارة فقط"
+
+#: includes/class-admin.php:227
+msgid "A page must match at least one inclusion below."
+msgstr "يجب أن تطابق الصفحة قاعدة تضمين واحدة على الأقل مما يلي."
+
+#: includes/class-admin.php:230
+msgid "Include individual pages or posts"
+msgstr "تضمين صفحات أو مقالات محددة"
+
+#: includes/class-admin.php:231
+msgid "Search published content and select results. Selected items stay attached to their IDs even when their URLs change."
+msgstr "ابحث في المحتوى المنشور واختر النتائج. ترتبط الاختيارات بالمعرّفات وتبقى محفوظة عند تغيير الروابط."
+
+#: includes/class-admin.php:232
+msgid "Include content types"
+msgstr "تضمين أنواع المحتوى"
+
+#: includes/class-admin.php:237
+msgid "Include special pages"
+msgstr "تضمين الصفحات الخاصة"
+
+#: includes/class-admin.php:238
+msgid "Include paths"
+msgstr "مسارات التضمين"
+
+#: includes/class-admin.php:242
+msgid "Always exclude"
+msgstr "استثناء دائم"
+
+#: includes/class-admin.php:242
+msgid "These rules apply in both display modes."
+msgstr "تُطبّق هذه القواعد في وضعَي العرض."
+
+#: includes/class-admin.php:243
+msgid "Exclude individual pages or posts"
+msgstr "استثناء صفحات أو مقالات محددة"
+
+#: includes/class-admin.php:244
+msgid "Exclude special pages"
+msgstr "استثناء الصفحات الخاصة"
+
+#: includes/class-admin.php:245
+msgid "Exclude paths"
+msgstr "المسارات المستثناة"
+
+#: includes/class-admin.php:246
+msgid "One path per line, relative to the WordPress home URL. /contact matches that page; /services/* matches paths inside services. Query strings are ignored and trailing slashes are equivalent. Use /* for every path. /services/* does not include /services itself."
+msgstr "مسار واحد في كل سطر، نسبةً إلى عنوان ووردبريس الرئيسي. يطابق /contact تلك الصفحة، ويطابق /services/* المسارات داخل services. تُتجاهل معاملات الاستعلام والشرطة المائلة الأخيرة. يشمل /* جميع المسارات. لا يشمل /services/* المسار /services نفسه."
+
+#: includes/class-admin.php:249
+msgid "Devices"
+msgstr "الأجهزة"
+
+#: includes/class-admin.php:253
+msgid "Mobile & desktop"
+msgstr "الجوال والحاسوب"
+
+#: includes/class-admin.php:254
+msgid "Mobile only"
+msgstr "الجوال فقط"
+
+#: includes/class-admin.php:255
+msgid "Desktop only"
+msgstr "الحاسوب فقط"
+
+#: includes/class-admin.php:260
+msgid "Mobile means a viewport up to 767px wide. The browser checks this before connecting, so cached pages can be shared safely between devices."
+msgstr "يعني الجوال عرضًا حتى 767 بكسل. يتحقق المتصفح قبل الاتصال، فتظل الصفحات المخزنة مؤقتًا قابلة للمشاركة بين الأجهزة."
+
+#: includes/class-admin.php:264
+msgid "Keep your pages focused"
+msgstr "حافظ على تركيز صفحاتك"
+
+#: includes/class-admin.php:264
+msgid "Control when chat connects."
+msgstr "تحكم في وقت اتصال الدردشة."
+
+#: includes/class-admin.php:264
+msgid "The remote widget is requested only when the selected loading condition is met."
+msgstr "لا يُطلب الودجت الخارجي إلا بعد تحقق شرط التحميل المختار."
+
+#: includes/class-admin.php:266
+msgid "Loading strategy"
+msgstr "طريقة التحميل"
+
+#: includes/class-admin.php:269
+msgid "After the page loads · Recommended"
+msgstr "بعد تحميل الصفحة · موصى به"
+
+#: includes/class-admin.php:269
+msgid "Wait for the window load event and an idle browser moment, with a short fallback timeout."
+msgstr "ينتظر اكتمال تحميل الصفحة ووقت خمول المتصفح، مع مهلة بديلة قصيرة عند الحاجة."
+
+#: includes/class-admin.php:270
+msgid "After a delay"
+msgstr "بعد تأخير"
+
+#: includes/class-admin.php:270
+msgid "Wait the selected number of seconds after the page loads."
+msgstr "ينتظر عدد الثواني المحدد بعد تحميل الصفحة."
+
+#: includes/class-admin.php:271
+msgid "Only when the visitor clicks"
+msgstr "عند نقر الزائر فقط"
+
+#: includes/class-admin.php:271
+msgid "Show a lightweight local chat button. Load the service after it is clicked; the visitor can then open the Hamgoo widget."
+msgstr "يعرض زر دردشة محليًا خفيفًا ويحمل الخدمة بعد النقر؛ بعدها يستطيع الزائر فتح ودجت همگو."
+
+#: includes/class-admin.php:276
+msgid "Delay in seconds (0–120)"
+msgstr "التأخير بالثواني؛ من 0 إلى 120"
+
+#: includes/class-admin.php:277
+msgid "These options can reduce initial network work. Search ranking and performance scores also depend on your theme, content and the remote widget."
+msgstr "قد تقلل هذه الخيارات العمل الشبكي الأولي. يعتمد ترتيب البحث والأداء أيضًا على القالب والمحتوى والودجت الخارجي."
+
+#: includes/class-admin.php:280
+msgid "Visitor privacy"
+msgstr "خصوصية الزائر"
+
+#: includes/class-admin.php:281
+msgid "Wait for consent from my cookie manager"
+msgstr "انتظار موافقة مدير ملفات الارتباط"
+
+#: includes/class-admin.php:281
+msgid "No remote connection or local chat button appears until your consent integration allows chat. This plugin does not provide a cookie banner."
+msgstr "لا يظهر زر الدردشة المحلي ولا يبدأ اتصال خارجي حتى تسمح أداة الموافقة بذلك. لا توفر هذه الإضافة لافتة ملفات ارتباط."
+
+#: includes/class-admin.php:282
+msgid "When this option is enabled, your consent manager must call window.HamgooLiveChat.grantConsent() after approval and window.HamgooLiveChat.revokeConsent() after withdrawal. Existing chats are stopped on reload after withdrawal; an already loaded third-party widget cannot be fully unloaded by this plugin."
+msgstr "عند التفعيل، يجب أن تستدعي أداة الموافقة window.HamgooLiveChat.grantConsent() بعد القبول وwindow.HamgooLiveChat.revokeConsent() بعد السحب. تتوقف الدردشة القائمة بعد إعادة تحميل الصفحة دون موافقة؛ لا يمكن للإضافة إلغاء تحميل ودجت خارجي سبق تشغيله بالكامل."
+
+#: includes/class-admin.php:283
+msgid "Consent is kept in memory for this page only. Your consent manager should apply the visitor choice on every page. Until it grants consent, chat remains unavailable."
+msgstr "تُحفظ الموافقة في ذاكرة هذه الصفحة فقط. يجب أن تطبق أداة الموافقة اختيار الزائر في كل صفحة. تظل الدردشة غير متاحة حتى تمنح الإذن."
+
+#: includes/class-admin.php:284
+msgid "When loaded, the widget contacts Hamkaran and the realtime provider. Chat can send page URL, title, referrer, browser, operating system, session details and visitor-entered contact information, messages and files. Browser storage maintains the conversation. Voice recording requests microphone permission."
+msgstr "يتصل الودجت عند التحميل بهمکاران ومزود الاتصال الفوري. قد يرسل رابط الصفحة وعنوانها والإحالة والمتصفح ونظام التشغيل وبيانات الجلسة وبيانات الاتصال والرسائل والملفات التي يقدمها الزائر. يحفظ تخزين المتصفح المحادثة ويتطلب التسجيل الصوتي إذن الميكروفون."
+
+#: includes/class-admin.php:285
+msgid "Read the service privacy policy"
+msgstr "قراءة سياسة خصوصية الخدمة"
+
+#: includes/class-admin.php:286
+msgid "Suggested disclosure text is available in WordPress Settings → Privacy. Adapt it to your site and service configuration."
+msgstr "يتوفر نص إفصاح مقترح في إعدادات ووردبريس ← الخصوصية. عدّله حسب موقعك وإعدادات الخدمة."
+
+#: includes/class-admin.php:287
+msgid "Delete plugin settings when uninstalling"
+msgstr "حذف إعدادات الإضافة عند إزالتها"
+
+#: includes/class-admin.php:287
+msgid "Deactivation keeps settings. Uninstalling with this option enabled removes settings only on this site; cloud conversations are unaffected."
+msgstr "يحتفظ التعطيل بالإعدادات. عند إزالة الإضافة مع تفعيل هذا الخيار، تُحذف إعدادات هذا الموقع فقط ولا تتأثر المحادثات السحابية."
+
+#: includes/class-admin.php:291
+msgid "A clear path to your first conversation"
+msgstr "خطوات واضحة نحو محادثتك الأولى"
+
+#: includes/class-admin.php:291
+msgid "Setup guide & answers"
+msgstr "دليل الإعداد والإجابات"
+
+#: includes/class-admin.php:291
+msgid "Appearance and agent replies are managed in Hamgoo. WordPress manages installation and page rules."
+msgstr "تُدار الهيئة وردود الفريق في همگو. يدير ووردبريس التثبيت وقواعد الصفحات."
+
+#: includes/class-admin.php:292
+msgid "Start in four steps"
+msgstr "البدء في أربع خطوات"
+
+#: includes/class-admin.php:293
+msgid "Activate the Hamgoo service in your Hamkaran account. Open Settings → Widget, create an active widget and add your website to its allowed domains."
+msgstr "فعّل خدمة همگو في حساب همکاران. افتح الإعدادات ← الودجت، وأنشئ ودجت نشطًا وأضف موقعك إلى النطاقات المسموح بها."
+
+#: includes/class-admin.php:294
+msgid "Copy the widget key shown beside the widget, enter it in Connect & start, accept the service connection and enable chat."
+msgstr "انسخ المفتاح بجانب الودجت وأدخله في «الاتصال والبدء»، ووافق على اتصال الخدمة وفعّل الدردشة."
+
+#: includes/class-admin.php:295
+msgid "Choose display rules and a loading strategy, then save. Remove any older copy of the installation scripts from your theme, tag manager or code-insertion plugin."
+msgstr "اختر قواعد العرض وطريقة التحميل ثم احفظ. أزل سكربت التثبيت القديم من القالب أو مدير الوسوم أو إضافة إدراج الأكواد."
+
+#: includes/class-admin.php:296
+msgid "Clear your page cache. Open an eligible page as a visitor, start a conversation and confirm that your team receives and can reply to the message in Hamgoo."
+msgstr "امسح ذاكرة الصفحات المؤقتة. افتح صفحة مسموحة كزائر وابدأ محادثة، ثم تحقق من استلام الرسالة والرد عليها في همگو."
+
+#: includes/class-admin.php:303
+msgid "Need a hand?"
+msgstr "هل تحتاج إلى مساعدة؟"
+
+#: includes/class-admin.php:303
+msgid "Existing customers can contact support through the Hamkaran panel. For service information, purchase or consultation, visit the Hamkaran website."
+msgstr "يمكن للعملاء الحاليين التواصل مع الدعم عبر لوحة همکاران. للتعرف على الخدمة أو الشراء أو الاستشارة، زر موقع همکاران."
+
+#: includes/class-admin.php:303
+msgid "Support in your panel"
+msgstr "الدعم في لوحتك"
+
+#: includes/class-admin.php:303
+msgid "Service & consultation"
+msgstr "الخدمة والاستشارة"
+
+#: includes/class-admin.php:307
+msgid "YOUR CHAT SETUP"
+msgstr "إعداد الدردشة لديك"
+
+#: includes/class-admin.php:307
+msgid "Ready for a conversation?"
+msgstr "هل أنت جاهز للمحادثة؟"
+
+#: includes/class-admin.php:308
+msgid "Widget key saved"
+msgstr "تم حفظ مفتاح الودجت"
+
+#: includes/class-admin.php:308
+msgid "Add your widget key"
+msgstr "أضف مفتاح الودجت"
+
+#: includes/class-admin.php:309
+msgid "Chat enabled"
+msgstr "الدردشة مفعّلة"
+
+#: includes/class-admin.php:309
+msgid "Enable chat after setup"
+msgstr "فعّل الدردشة بعد الإعداد"
+
+#: includes/class-admin.php:310
+msgid "All pages, with exclusions"
+msgstr "جميع الصفحات مع الاستثناءات"
+
+#: includes/class-admin.php:310
+msgid "Only selected pages"
+msgstr "الصفحات المختارة فقط"
+
+#: includes/class-admin.php:311
+msgid "Illustrative preview. Actual widget colors, position and messages come from your Hamgoo settings."
+msgstr "هذه معاينة توضيحية فقط. تأتي الألوان والموقع والرسائل الفعلية من إعدادات همگو."
+
+#: includes/class-admin.php:312
+msgid "Your brand, your conversation"
+msgstr "علامتك، محادثتك"
+
+#: includes/class-admin.php:312
+msgid "Change colors, welcome text, launcher position and response hours in the Hamgoo panel. Changes there are used by your connected widget."
+msgstr "غيّر الألوان ورسالة الترحيب وموقع الزر وساعات الرد في لوحة همگو. يستخدم الودجت المتصل تلك التغييرات."
+
+#: includes/class-admin.php:312
+msgid "Manage widget appearance"
+msgstr "إدارة مظهر الودجت"
+
+#: includes/class-admin.php:315
+msgid "Save settings"
+msgstr "حفظ الإعدادات"
+
+#: includes/class-admin.php:317
+msgid "Privacy"
+msgstr "الخصوصية"
+
+#: includes/class-admin.php:334
+msgid "WooCommerce page choices appear when WooCommerce is active."
+msgstr "تظهر خيارات صفحات ووكومرس عند تفعيله."
+
+#: includes/class-admin.php:340
+msgid "Why does chat not appear?"
+msgstr "لماذا لا تظهر الدردشة؟"
+
+#: includes/class-admin.php:340
+msgid "Check the saved key, enable switch, accepted service connection, active subscription and widget, allowed domain, display exclusions and device choice. With consent mode, your cookie manager must grant consent. In click mode, click the local button. Clear caches after saving."
+msgstr "تحقق من المفتاح والتفعيل والموافقة والاشتراك والودجت النشط والنطاق والاستثناءات والجهاز. في وضع الموافقة يجب أن يمنح مدير ملفات الارتباط الإذن. في وضع النقر اضغط الزر المحلي. امسح الذاكرة المؤقتة بعد الحفظ."
+
+#: includes/class-admin.php:341
+msgid "Where do I change colors and response hours?"
+msgstr "أين أغيّر الألوان وساعات الرد؟"
+
+#: includes/class-admin.php:341
+msgid "In the Hamgoo panel: Settings → Widget for appearance and Settings → Response hours for availability. The WordPress plugin uses those settings."
+msgstr "في لوحة همگو: الإعدادات ← الودجت للمظهر، والإعدادات ← ساعات الرد للتوفر. تستخدم إضافة ووردبريس تلك الإعدادات."
+
+#: includes/class-admin.php:342
+msgid "Can I use this without a Hamgoo account?"
+msgstr "هل يمكن استخدامه دون حساب همگو؟"
+
+#: includes/class-admin.php:342
+msgid "You can install and explore the settings, but live chat requires an active Hamgoo service and your own widget key. Visit Hamkaran for purchase and consultation."
+msgstr "يمكنك تثبيت الإضافة واستكشاف الإعدادات، لكن الدردشة تحتاج خدمة همگو نشطة ومفتاح ودجت خاصًا بك. زر همکاران للشراء والاستشارة."
+
+#: includes/class-admin.php:343
+msgid "How do I avoid duplicate widgets?"
+msgstr "كيف أتجنب تكرار الودجت؟"
+
+#: includes/class-admin.php:343
+msgid "Remove the earlier Hamkaran installation scripts from your theme, tag manager and other plugins. This loader avoids inserting the same script twice, but cannot reconcile different keys installed by another tool."
+msgstr "أزل سكربت همکاران السابق من القالب ومدير الوسوم والإضافات الأخرى. يمنع هذا المحمّل تكرار السكربت نفسه، لكنه لا يدمج مفاتيح مختلفة ثبتتها أداة أخرى."
+
+#: includes/class-admin.php:344
+msgid "What about cache and optimization plugins?"
+msgstr "ماذا عن إضافات التخزين المؤقت والتحسين؟"
+
+#: includes/class-admin.php:344
+msgid "Clear page and CDN caches after changes. If JavaScript optimization breaks chat, exclude hamgoo-loader, HamgooLiveChatLoader and cp.hamkaran.cloud/widget/chat.js from combining or delayed execution. Selected loading and consent rules must still be preserved."
+msgstr "امسح ذاكرة الصفحات وCDN بعد التغييرات. إذا عطّل تحسين JavaScript الدردشة، استثنِ hamgoo-loader وHamgooLiveChatLoader وcp.hamkaran.cloud/widget/chat.js من الدمج أو التنفيذ المؤجل. يجب الحفاظ على قواعد التحميل والموافقة."
+
+#: includes/class-admin.php:345
+msgid "Does this improve Google rankings?"
+msgstr "هل يحسن ترتيب جوجل؟"
+
+#: includes/class-admin.php:345
+msgid "Page exclusions and deferred loading reduce unnecessary work. The plugin does not change your SEO metadata or guarantee rankings. Test the final website performance, including the remote widget."
+msgstr "تقلل الاستثناءات والتحميل المؤجل العمل غير الضروري. لا تغيّر الإضافة بيانات SEO ولا تضمن الترتيب. اختبر أداء الموقع النهائي بما فيه الودجت الخارجي."
+
+#: includes/class-admin.php:346
+msgid "Is the widget key a secret?"
+msgstr "هل مفتاح الودجت سرّي؟"
+
+#: includes/class-admin.php:346
+msgid "It is a public installation identifier visible in eligible website pages, not your panel password. Restrict allowed domains in Hamgoo. Never enter account passwords or private API tokens here."
+msgstr "هو معرّف تثبيت عام يظهر في صفحات الموقع المسموحة، وليس كلمة مرور اللوحة. قيّد النطاقات في همگو. لا تدخل كلمات مرور أو رموز API خاصة هنا."
+
+#: includes/class-admin.php:347
+msgid "Where are chats stored?"
+msgstr "أين تُخزّن المحادثات؟"
+
+#: includes/class-admin.php:347
+msgid "Conversations are handled by the Hamkaran cloud service. This plugin stores connection and display settings in WordPress and does not copy chat messages into WordPress."
+msgstr "تُدار المحادثات في خدمة همکاران السحابية. تخزّن الإضافة إعدادات الاتصال والعرض في ووردبريس ولا تنسخ الرسائل إليه."
+
+#: includes/class-admin.php:348
+msgid "Does it work with page builders and multisite?"
+msgstr "هل يعمل مع منشئي الصفحات وتعدد المواقع؟"
+
+#: includes/class-admin.php:348
+msgid "It uses standard WordPress frontend hooks and requires the theme to call wp_head() and wp_footer(). Page builders do not need a separate integration. In multisite, each site has its own widget key and settings; configure sites individually."
+msgstr "يستخدم خطافات ووردبريس القياسية ويجب أن يستدعي القالب wp_head() وwp_footer(). لا يحتاج منشئ الصفحات تكاملًا منفصلًا. في تعدد المواقع لكل موقع مفتاح وإعدادات مستقلة؛ اضبط المواقع منفردة."
+
+#: includes/class-frontend.php:33
+msgid "Chat with us"
+msgstr "تحدث معنا"
+
+#: includes/class-frontend.php:34
+msgid "Connecting to chat…"
+msgstr "جارٍ الاتصال بالدردشة…"
+
+#: includes/class-frontend.php:35
+msgid "Chat could not load. Try again."
+msgstr "تعذر تحميل الدردشة. حاول مرة أخرى."
+
+#: includes/class-rules.php:13
+msgid "Front page"
+msgstr "الصفحة الرئيسية"
+
+#: includes/class-rules.php:14
+msgid "Blog index"
+msgstr "صفحة المقالات"
+
+#: includes/class-rules.php:15
+msgid "Archives"
+msgstr "الأرشيفات"
+
+#: includes/class-rules.php:16
+msgid "Search results"
+msgstr "نتائج البحث"
+
+#: includes/class-rules.php:17
+msgid "404 pages"
+msgstr "صفحات 404"
+
+#: includes/class-rules.php:18
+msgid "WooCommerce shop"
+msgstr "متجر ووكومرس"
+
+#: includes/class-rules.php:19
+msgid "WooCommerce products"
+msgstr "منتجات ووكومرس"
+
+#: includes/class-rules.php:20
+msgid "WooCommerce product categories and tags"
+msgstr "تصنيفات ووسوم منتجات ووكومرس"
+
+#: includes/class-rules.php:21
+msgid "WooCommerce cart"
+msgstr "سلة ووكومرس"
+
+#: includes/class-rules.php:22
+msgid "WooCommerce checkout"
+msgstr "إتمام شراء ووكومرس"
+
+#: includes/class-rules.php:23
+msgid "WooCommerce account"
+msgstr "حساب ووكومرس"
+
+#: includes/class-settings.php:60
+msgid "Enter only the widget key: cw_ followed by 32 letters or numbers. Do not paste the installation scripts."
+msgstr "أدخل مفتاح الودجت فقط: cw_ ثم 32 حرفًا لاتينيًا أو رقمًا. لا تلصق سكربتات التثبيت."
+
+#: includes/class-settings.php:85
+msgid "Chat stays disabled until a valid widget key is saved and the external service connection is accepted."
+msgstr "تبقى الدردشة معطّلة حتى حفظ مفتاح صالح والموافقة على اتصال الخدمة الخارجية."
+
+#: includes/class-settings.php:98
+msgid "Paths must start with / and contain no domain, query string, spaces or fragment. Use * as a wildcard."
+msgstr "يجب أن يبدأ المسار بـ / وألا يحتوي على نطاق أو استعلام أو مسافات أو جزء بعد #. استخدم * للتطابق العام."
+
+#: includes/class-settings.php:108
+msgid "When Hamgoo chat loads, the visitor browser connects to the Hamkaran cloud service. The service receives network information, including the IP address. When a visitor starts or resumes a chat, page URL, page title, referrer, browser, operating system and session information can be sent. Names, phone numbers, email addresses, messages and attachments supplied by the visitor are processed by the service. The widget uses localStorage and sessionStorage to maintain the chat session. Microphone access is requested only when recording a voice message. Chat records are stored by Hamkaran, not in this plugin's WordPress database. Review the service privacy policy and adapt this text to your site's actual configuration and consent requirements."
+msgstr "عند تحميل دردشة همگو، يتصل متصفح الزائر بخدمة همکاران السحابية وتتلقى الخدمة معلومات الشبكة، ومنها عنوان IP. عند بدء المحادثة أو استئنافها قد تُرسل معلومات الصفحة والإحالة والمتصفح ونظام التشغيل والجلسة. تعالج الخدمة الأسماء والهواتف والبريد والرسائل والمرفقات التي يقدمها الزائر. يستخدم الودجت localStorage وsessionStorage للحفاظ على الجلسة. لا يُطلب إذن الميكروفون إلا لتسجيل رسالة صوتية. تُخزّن المحادثات لدى همکاران وليس في قاعدة بيانات ووردبريس الخاصة بهذه الإضافة. راجع سياسة الخدمة وعدّل النص حسب الإعدادات الفعلية ومتطلبات الموافقة."

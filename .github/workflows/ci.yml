@@ -1,0 +1,58 @@
+name: Quality checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['7.4', '8.3']
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # 2.40.0
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+          tools: composer
+      - run: composer install --no-interaction --prefer-dist --no-progress
+      - name: PHP and WordPress coding standards
+        run: |
+          find includes -name '*.php' -print0 | xargs -0 -n1 php -l
+          php -l hamgoo-live-chat.php
+          php -l uninstall.php
+          composer lint
+      - name: Targeted rule and loader checks
+        run: |
+          php tests/run.php
+          node --check assets/js/admin.js
+          node --check assets/js/loader.js
+          node tests/loader.test.js
+      - name: Catalogs and installable ZIP
+        run: |
+          python3 scripts/translations.py
+          git diff --exit-code -- languages
+          python3 scripts/verify.py
+
+  plugin-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Build exact distribution
+        run: |
+          python3 scripts/package.py
+          python3 -c 'from pathlib import Path; import zipfile; z=next(Path("dist").glob("*.zip")); zipfile.ZipFile(z).extractall("dist/check")'
+      - uses: WordPress/plugin-check-action@10857da14b6c2246d15402b3e69f777edcf8c12e # v1.1.9
+        with:
+          build-dir: dist/check/hamgoo-live-chat
+          wp-version: latest
+          ignore-errors: false
+          ignore-warnings: false

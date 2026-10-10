@@ -1,0 +1,631 @@
+# Hamgoo Live Chat. GPL-2.0-or-later.
+msgid ""
+msgstr "Project-Id-Version: Hamgoo Live Chat 1.0.0\nReport-Msgid-Bugs-To: https://hamkaran.cloud/\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n > 1);\nX-Domain: hamgoo-live-chat\n"
+
+#: includes/class-admin.php:20 includes/class-admin.php:160
+msgid "Hamgoo Live Chat"
+msgstr "همگو — چت آنلاین"
+
+#: includes/class-admin.php:20
+msgid "Hamgoo"
+msgstr "همگو"
+
+#: includes/class-admin.php:37
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: includes/class-admin.php:55
+msgid "Checking service configuration…"
+msgstr "در حال بررسی تنظیمات سرویس…"
+
+#: includes/class-admin.php:56
+msgid "Configuration received. Open your website and send a test message to verify the full connection and allowed domain."
+msgstr "تنظیمات دریافت شد. سایت را باز کنید و یک پیام آزمایشی بفرستید تا اتصال کامل و دامنهٔ مجاز بررسی شوند."
+
+#: includes/class-admin.php:57
+msgid "The service refused this request. Check the subscription, widget status and allowed domain in Hamgoo."
+msgstr "سرویس این درخواست را نپذیرفت. اشتراک، وضعیت ویجت و دامنهٔ مجاز را در همگو بررسی کنید."
+
+#: includes/class-admin.php:58
+msgid "Widget not found. Check the saved key and whether the widget is active."
+msgstr "ویجت پیدا نشد. کلید ذخیره‌شده و فعال بودن ویجت را بررسی کنید."
+
+#: includes/class-admin.php:59
+msgid "The check could not complete. Check your network, browser privacy settings and service availability."
+msgstr "بررسی کامل نشد. اتصال اینترنت، تنظیمات حریم خصوصی مرورگر و دسترسی به سرویس را بررسی کنید."
+
+#: includes/class-admin.php:60
+msgid "No published content found."
+msgstr "محتوای منتشرشده‌ای پیدا نشد."
+
+#: includes/class-admin.php:61
+msgid "Search failed. Reload the page and try again."
+msgstr "جست‌وجو انجام نشد. صفحه را دوباره بارگذاری و تلاش کنید."
+
+#: includes/class-admin.php:62 includes/class-admin.php:132
+msgid "Remove"
+msgstr "حذف"
+
+#: includes/class-admin.php:63
+msgid "You have unsaved changes."
+msgstr "تغییرات ذخیره‌نشده دارید."
+
+#: includes/class-admin.php:64 includes/class-admin.php:315
+msgid "All settings are saved."
+msgstr "همهٔ تنظیمات ذخیره شده‌اند."
+
+#: includes/class-admin.php:122
+msgid "Search by title (at least 2 characters)"
+msgstr "جست‌وجو با عنوان؛ حداقل ۲ نویسه"
+
+#: includes/class-admin.php:161
+msgid "Enabled on eligible pages"
+msgstr "در صفحات مجاز فعال است"
+
+#: includes/class-admin.php:161
+msgid "Chat is disabled"
+msgstr "چت غیرفعال است"
+
+#: includes/class-admin.php:161 includes/class-admin.php:297
+msgid "Open Hamgoo panel"
+msgstr "ورود به پنل همگو"
+
+#: includes/class-admin.php:166
+msgid "Plugin sections"
+msgstr "بخش‌های افزونه"
+
+#: includes/class-admin.php:169
+msgid "Connect & start"
+msgstr "اتصال و شروع"
+
+#: includes/class-admin.php:170
+msgid "Display rules"
+msgstr "قواعد نمایش"
+
+#: includes/class-admin.php:171
+msgid "Loading & privacy"
+msgstr "بارگذاری و حریم خصوصی"
+
+#: includes/class-admin.php:172
+msgid "Guide & support"
+msgstr "راهنما و پشتیبانی"
+
+#: includes/class-admin.php:182
+msgid "A conversation starts here"
+msgstr "شروع یک گفتگوی تازه"
+
+#: includes/class-admin.php:182
+msgid "Be there when customers need you."
+msgstr "وقتی مشتری به شما نیاز دارد، کنارش باشید."
+
+#: includes/class-admin.php:182
+msgid "Connect your website to Hamgoo. Your team replies from the Hamkaran panel, and you decide where chat appears."
+msgstr "سایت را به همگو وصل کنید. تیم شما از پنل همکاران پاسخ می‌دهد و شما محل نمایش چت را تعیین می‌کنید."
+
+#: includes/class-admin.php:182
+msgid "I have a widget key"
+msgstr "کلید ویجت دارم"
+
+#: includes/class-admin.php:186
+msgid "Connect your widget"
+msgstr "اتصال ویجت"
+
+#: includes/class-admin.php:186
+msgid "One key. No installation scripts or panel password."
+msgstr "فقط یک کلید؛ بدون کد نصب یا رمز پنل."
+
+#: includes/class-admin.php:187
+msgid "Widget key"
+msgstr "کلید ویجت"
+
+#: includes/class-admin.php:189
+msgid "In Hamgoo: Settings → Widget. Copy the key shown beside your widget. Only the cw_… value belongs here."
+msgstr "در همگو به «تنظیمات ← ویجت» بروید و کلید کنار ویجت را کپی کنید. فقط مقدار cw_… را اینجا وارد کنید."
+
+#: includes/class-admin.php:190
+msgid "I accept connecting this site to the Hamkaran chat service."
+msgstr "اتصال این سایت به سرویس چت همکاران را می‌پذیرم."
+
+#: includes/class-admin.php:190
+msgid "The widget contacts an external service and processes visitor information when loaded. Read the privacy details before enabling."
+msgstr "ویجت هنگام بارگذاری به سرویس خارجی متصل می‌شود و اطلاعات بازدیدکننده را پردازش می‌کند. پیش از فعال‌سازی، توضیحات حریم خصوصی را بخوانید."
+
+#: includes/class-admin.php:191 includes/class-settings.php:108
+msgid "Service privacy policy"
+msgstr "حریم خصوصی سرویس"
+
+#: includes/class-admin.php:191 includes/class-admin.php:317
+msgid "Service agreement"
+msgstr "توافق‌نامهٔ سرویس"
+
+#: includes/class-admin.php:193
+msgid "Enable live chat"
+msgstr "فعال‌سازی چت آنلاین"
+
+#: includes/class-admin.php:193
+msgid "Requires a valid saved key and acceptance of the service connection."
+msgstr "کلید معتبر ذخیره‌شده و پذیرش اتصال به سرویس لازم است."
+
+#: includes/class-admin.php:194
+msgid "Check saved widget configuration"
+msgstr "بررسی تنظیمات ویجت ذخیره‌شده"
+
+#: includes/class-admin.php:194
+msgid "Open website to test"
+msgstr "باز کردن سایت برای آزمایش"
+
+#: includes/class-admin.php:195
+msgid "This check makes a request only when clicked, using the saved key. It checks configuration, not message delivery."
+msgstr "این بررسی فقط با کلیک و با کلید ذخیره‌شده درخواست می‌فرستد؛ دریافت تنظیمات را بررسی می‌کند، نه تحویل پیام را."
+
+#: includes/class-admin.php:199
+msgid "New to Hamgoo?"
+msgstr "تازه با همگو آشنا شده‌اید؟"
+
+#: includes/class-admin.php:199
+msgid "Give your customers a direct line to your team."
+msgstr "راه ارتباط مستقیم مشتری با تیم خود را فراهم کنید."
+
+#: includes/class-admin.php:199
+msgid "An active Hamgoo service and a widget created in your account are required. Visit Hamkaran to learn about the service, purchase options and consultation."
+msgstr "برای استفاده، سرویس همگو باید فعال باشد و در حساب خود ویجت ساخته باشید. برای آشنایی با سرویس، خرید و مشاوره به سایت همکاران بروید."
+
+#: includes/class-admin.php:199
+msgid "Explore service & purchase"
+msgstr "معرفی سرویس و خرید"
+
+#: includes/class-admin.php:199
+msgid "Get consultation"
+msgstr "دریافت مشاوره"
+
+#: includes/class-admin.php:203
+msgid "Plugin language"
+msgstr "زبان افزونه"
+
+#: includes/class-admin.php:204
+msgid "Administration language"
+msgstr "زبان پنل مدیریت"
+
+#: includes/class-admin.php:208
+msgid "Follow WordPress user language"
+msgstr "مطابق زبان کاربر وردپرس"
+
+#: includes/class-admin.php:218
+msgid "Changes only this plugin panel. Save to apply. Chat appearance and messages are managed in Hamgoo."
+msgstr "فقط زبان پنل این افزونه تغییر می‌کند. برای اعمال، ذخیره کنید. ظاهر چت و پیام‌ها در همگو مدیریت می‌شوند."
+
+#: includes/class-admin.php:222
+msgid "The right pages, the right moment"
+msgstr "صفحهٔ مناسب، زمان مناسب"
+
+#: includes/class-admin.php:222
+msgid "Choose where chat appears."
+msgstr "محل نمایش چت را انتخاب کنید."
+
+#: includes/class-admin.php:222
+msgid "Excluded pages never receive the chat loader. Exclusions always override inclusions."
+msgstr "صفحات مستثناشده هیچ فایل بارگذاری چت دریافت نمی‌کنند. استثناها همیشه بر قواعد نمایش اولویت دارند."
+
+#: includes/class-admin.php:224
+msgid "Display scope"
+msgstr "محدودهٔ نمایش"
+
+#: includes/class-admin.php:226
+msgid "All public pages"
+msgstr "همهٔ صفحات عمومی"
+
+#: includes/class-admin.php:226
+msgid "Show throughout the website, except your exclusions."
+msgstr "نمایش در سراسر سایت، به‌جز استثناهای شما."
+
+#: includes/class-admin.php:227
+msgid "Selected pages only"
+msgstr "فقط صفحات انتخاب‌شده"
+
+#: includes/class-admin.php:227
+msgid "A page must match at least one inclusion below."
+msgstr "صفحه باید دست‌کم با یکی از قواعد نمایش زیر مطابقت داشته باشد."
+
+#: includes/class-admin.php:230
+msgid "Include individual pages or posts"
+msgstr "نمایش در برگه‌ها یا نوشته‌های مشخص"
+
+#: includes/class-admin.php:231
+msgid "Search published content and select results. Selected items stay attached to their IDs even when their URLs change."
+msgstr "محتوای منتشرشده را جست‌وجو و انتخاب کنید. انتخاب‌ها به شناسه وصل هستند و با تغییر آدرس حفظ می‌شوند."
+
+#: includes/class-admin.php:232
+msgid "Include content types"
+msgstr "نمایش در انواع محتوا"
+
+#: includes/class-admin.php:237
+msgid "Include special pages"
+msgstr "نمایش در صفحات ویژه"
+
+#: includes/class-admin.php:238
+msgid "Include paths"
+msgstr "مسیرهای مجاز نمایش"
+
+#: includes/class-admin.php:242
+msgid "Always exclude"
+msgstr "همیشه مستثنا شوند"
+
+#: includes/class-admin.php:242
+msgid "These rules apply in both display modes."
+msgstr "این قواعد در هر دو حالت نمایش اعمال می‌شوند."
+
+#: includes/class-admin.php:243
+msgid "Exclude individual pages or posts"
+msgstr "عدم نمایش در برگه‌ها یا نوشته‌های مشخص"
+
+#: includes/class-admin.php:244
+msgid "Exclude special pages"
+msgstr "عدم نمایش در صفحات ویژه"
+
+#: includes/class-admin.php:245
+msgid "Exclude paths"
+msgstr "مسیرهای مستثناشده"
+
+#: includes/class-admin.php:246
+msgid "One path per line, relative to the WordPress home URL. /contact matches that page; /services/* matches paths inside services. Query strings are ignored and trailing slashes are equivalent. Use /* for every path. /services/* does not include /services itself."
+msgstr "هر خط یک مسیر، نسبت به آدرس اصلی وردپرس. /contact همان صفحه و /services/* مسیرهای داخل services را پوشش می‌دهد. پارامترهای آدرس نادیده گرفته می‌شوند و اسلش پایانی تفاوتی ندارد. /* همهٔ مسیرها را پوشش می‌دهد. /services/* خودِ /services را شامل نمی‌شود."
+
+#: includes/class-admin.php:249
+msgid "Devices"
+msgstr "دستگاه‌ها"
+
+#: includes/class-admin.php:253
+msgid "Mobile & desktop"
+msgstr "موبایل و دسکتاپ"
+
+#: includes/class-admin.php:254
+msgid "Mobile only"
+msgstr "فقط موبایل"
+
+#: includes/class-admin.php:255
+msgid "Desktop only"
+msgstr "فقط دسکتاپ"
+
+#: includes/class-admin.php:260
+msgid "Mobile means a viewport up to 767px wide. The browser checks this before connecting, so cached pages can be shared safely between devices."
+msgstr "موبایل یعنی عرض صفحه تا ۷۶۷ پیکسل. مرورگر پیش از اتصال این شرط را بررسی می‌کند تا کش صفحه بین دستگاه‌ها مشترک بماند."
+
+#: includes/class-admin.php:264
+msgid "Keep your pages focused"
+msgstr "تمرکز صفحه را حفظ کنید"
+
+#: includes/class-admin.php:264
+msgid "Control when chat connects."
+msgstr "زمان اتصال چت را کنترل کنید."
+
+#: includes/class-admin.php:264
+msgid "The remote widget is requested only when the selected loading condition is met."
+msgstr "ویجت خارجی فقط پس از برقرار شدن شرط بارگذاری انتخاب‌شده درخواست می‌شود."
+
+#: includes/class-admin.php:266
+msgid "Loading strategy"
+msgstr "روش بارگذاری"
+
+#: includes/class-admin.php:269
+msgid "After the page loads · Recommended"
+msgstr "پس از بارگذاری صفحه · پیشنهادی"
+
+#: includes/class-admin.php:269
+msgid "Wait for the window load event and an idle browser moment, with a short fallback timeout."
+msgstr "پس از بارگذاری کامل صفحه، منتظر فرصت آزاد مرورگر می‌ماند؛ در صورت نیاز از تأخیر کوتاه جایگزین استفاده می‌کند."
+
+#: includes/class-admin.php:270
+msgid "After a delay"
+msgstr "پس از تأخیر"
+
+#: includes/class-admin.php:270
+msgid "Wait the selected number of seconds after the page loads."
+msgstr "پس از بارگذاری صفحه، به تعداد ثانیهٔ تعیین‌شده منتظر می‌ماند."
+
+#: includes/class-admin.php:271
+msgid "Only when the visitor clicks"
+msgstr "فقط با کلیک بازدیدکننده"
+
+#: includes/class-admin.php:271
+msgid "Show a lightweight local chat button. Load the service after it is clicked; the visitor can then open the Hamgoo widget."
+msgstr "یک دکمهٔ سبک محلی نمایش می‌دهد و با کلیک، سرویس را بارگذاری می‌کند؛ سپس بازدیدکننده می‌تواند ویجت همگو را باز کند."
+
+#: includes/class-admin.php:276
+msgid "Delay in seconds (0–120)"
+msgstr "تأخیر به ثانیه؛ ۰ تا ۱۲۰"
+
+#: includes/class-admin.php:277
+msgid "These options can reduce initial network work. Search ranking and performance scores also depend on your theme, content and the remote widget."
+msgstr "این گزینه‌ها می‌توانند درخواست‌های اولیه را کاهش دهند. رتبهٔ جست‌وجو و امتیاز عملکرد به قالب، محتوا و ویجت خارجی نیز بستگی دارند."
+
+#: includes/class-admin.php:280
+msgid "Visitor privacy"
+msgstr "حریم خصوصی بازدیدکننده"
+
+#: includes/class-admin.php:281
+msgid "Wait for consent from my cookie manager"
+msgstr "انتظار برای رضایت از ابزار مدیریت کوکی سایت"
+
+#: includes/class-admin.php:281
+msgid "No remote connection or local chat button appears until your consent integration allows chat. This plugin does not provide a cookie banner."
+msgstr "تا زمانی که ابزار رضایت سایت اجازه ندهد، اتصال خارجی و دکمهٔ محلی چت نمایش داده نمی‌شوند. این افزونه بنر کوکی ارائه نمی‌کند."
+
+#: includes/class-admin.php:282
+msgid "When this option is enabled, your consent manager must call window.HamgooLiveChat.grantConsent() after approval and window.HamgooLiveChat.revokeConsent() after withdrawal. Existing chats are stopped on reload after withdrawal; an already loaded third-party widget cannot be fully unloaded by this plugin."
+msgstr "در این حالت، ابزار رضایت باید پس از تأیید window.HamgooLiveChat.grantConsent() و پس از پس‌گرفتن رضایت window.HamgooLiveChat.revokeConsent() را فراخوانی کند. توقف چت بارگذاری‌شده پس از پس‌گرفتن رضایت، با بارگذاری مجدد صفحه انجام می‌شود؛ افزونه نمی‌تواند ویجت خارجی اجراشده را کاملاً از حافظه حذف کند."
+
+#: includes/class-admin.php:283
+msgid "Consent is kept in memory for this page only. Your consent manager should apply the visitor choice on every page. Until it grants consent, chat remains unavailable."
+msgstr "رضایت فقط در حافظهٔ همین صفحه نگهداری می‌شود. ابزار مدیریت رضایت باید انتخاب بازدیدکننده را در هر صفحه اعمال کند. تا اجازه ندهد، چت در دسترس نیست."
+
+#: includes/class-admin.php:284
+msgid "When loaded, the widget contacts Hamkaran and the realtime provider. Chat can send page URL, title, referrer, browser, operating system, session details and visitor-entered contact information, messages and files. Browser storage maintains the conversation. Voice recording requests microphone permission."
+msgstr "ویجت پس از بارگذاری به همکاران و ارائه‌دهندهٔ ارتباط بلادرنگ متصل می‌شود. آدرس و عنوان صفحه، ارجاع‌دهنده، مرورگر، سیستم‌عامل، اطلاعات نشست و اطلاعات تماس، پیام‌ها و فایل‌های واردشده توسط بازدیدکننده ممکن است ارسال شوند. حافظهٔ مرورگر گفتگو را حفظ می‌کند و ضبط صدا به اجازهٔ میکروفن نیاز دارد."
+
+#: includes/class-admin.php:285
+msgid "Read the service privacy policy"
+msgstr "مطالعهٔ حریم خصوصی سرویس"
+
+#: includes/class-admin.php:286
+msgid "Suggested disclosure text is available in WordPress Settings → Privacy. Adapt it to your site and service configuration."
+msgstr "متن پیشنهادی اطلاع‌رسانی در «تنظیمات ← حریم خصوصی» وردپرس موجود است. آن را با سایت و تنظیمات سرویس خود هماهنگ کنید."
+
+#: includes/class-admin.php:287
+msgid "Delete plugin settings when uninstalling"
+msgstr "حذف تنظیمات افزونه هنگام پاک‌کردن آن"
+
+#: includes/class-admin.php:287
+msgid "Deactivation keeps settings. Uninstalling with this option enabled removes settings only on this site; cloud conversations are unaffected."
+msgstr "غیرفعال‌سازی، تنظیمات را حفظ می‌کند. با فعال بودن این گزینه، حذف افزونه فقط تنظیمات همین سایت را پاک می‌کند و گفتگوهای ابری تغییری نمی‌کنند."
+
+#: includes/class-admin.php:291
+msgid "A clear path to your first conversation"
+msgstr "مسیر روشن تا اولین گفتگو"
+
+#: includes/class-admin.php:291
+msgid "Setup guide & answers"
+msgstr "راهنمای راه‌اندازی و پاسخ‌ها"
+
+#: includes/class-admin.php:291
+msgid "Appearance and agent replies are managed in Hamgoo. WordPress manages installation and page rules."
+msgstr "ظاهر و پاسخ کارشناسان در همگو مدیریت می‌شوند. وردپرس نصب و قواعد صفحات را مدیریت می‌کند."
+
+#: includes/class-admin.php:292
+msgid "Start in four steps"
+msgstr "شروع در چهار مرحله"
+
+#: includes/class-admin.php:293
+msgid "Activate the Hamgoo service in your Hamkaran account. Open Settings → Widget, create an active widget and add your website to its allowed domains."
+msgstr "سرویس همگو را در حساب همکاران فعال کنید. در «تنظیمات ← ویجت» یک ویجت فعال بسازید و دامنهٔ سایت را در دامنه‌های مجاز ثبت کنید."
+
+#: includes/class-admin.php:294
+msgid "Copy the widget key shown beside the widget, enter it in Connect & start, accept the service connection and enable chat."
+msgstr "کلید کنار ویجت را کپی و در «اتصال و شروع» وارد کنید؛ اتصال به سرویس را بپذیرید و چت را فعال کنید."
+
+#: includes/class-admin.php:295
+msgid "Choose display rules and a loading strategy, then save. Remove any older copy of the installation scripts from your theme, tag manager or code-insertion plugin."
+msgstr "قواعد نمایش و روش بارگذاری را انتخاب و ذخیره کنید. کد نصب قدیمی را از قالب، تگ‌منیجر یا افزونهٔ درج کد حذف کنید."
+
+#: includes/class-admin.php:296
+msgid "Clear your page cache. Open an eligible page as a visitor, start a conversation and confirm that your team receives and can reply to the message in Hamgoo."
+msgstr "کش صفحات را پاک کنید. یک صفحهٔ مجاز را مثل بازدیدکننده باز کنید، گفتگو را شروع کنید و دریافت و پاسخ پیام را در همگو بررسی کنید."
+
+#: includes/class-admin.php:303
+msgid "Need a hand?"
+msgstr "به کمک نیاز دارید؟"
+
+#: includes/class-admin.php:303
+msgid "Existing customers can contact support through the Hamkaran panel. For service information, purchase or consultation, visit the Hamkaran website."
+msgstr "مشتریان فعلی می‌توانند از پنل همکاران با پشتیبانی تماس بگیرند. برای معرفی سرویس، خرید یا مشاوره به سایت همکاران مراجعه کنید."
+
+#: includes/class-admin.php:303
+msgid "Support in your panel"
+msgstr "پشتیبانی در پنل"
+
+#: includes/class-admin.php:303
+msgid "Service & consultation"
+msgstr "سرویس و مشاوره"
+
+#: includes/class-admin.php:307
+msgid "YOUR CHAT SETUP"
+msgstr "وضعیت راه‌اندازی چت"
+
+#: includes/class-admin.php:307
+msgid "Ready for a conversation?"
+msgstr "آمادهٔ گفتگو هستید؟"
+
+#: includes/class-admin.php:308
+msgid "Widget key saved"
+msgstr "کلید ویجت ذخیره شده"
+
+#: includes/class-admin.php:308
+msgid "Add your widget key"
+msgstr "کلید ویجت را وارد کنید"
+
+#: includes/class-admin.php:309
+msgid "Chat enabled"
+msgstr "چت فعال است"
+
+#: includes/class-admin.php:309
+msgid "Enable chat after setup"
+msgstr "پس از راه‌اندازی چت را فعال کنید"
+
+#: includes/class-admin.php:310
+msgid "All pages, with exclusions"
+msgstr "همهٔ صفحات، با استثناها"
+
+#: includes/class-admin.php:310
+msgid "Only selected pages"
+msgstr "فقط صفحات انتخاب‌شده"
+
+#: includes/class-admin.php:311
+msgid "Illustrative preview. Actual widget colors, position and messages come from your Hamgoo settings."
+msgstr "این تصویر صرفاً نمونه است. رنگ، موقعیت و پیام‌های واقعی از تنظیمات همگو می‌آیند."
+
+#: includes/class-admin.php:312
+msgid "Your brand, your conversation"
+msgstr "برند شما، گفتگوی شما"
+
+#: includes/class-admin.php:312
+msgid "Change colors, welcome text, launcher position and response hours in the Hamgoo panel. Changes there are used by your connected widget."
+msgstr "رنگ، متن خوش‌آمد، موقعیت دکمه و ساعات پاسخ‌گویی را در پنل همگو تغییر دهید. ویجت متصل از تغییرات همان‌جا استفاده می‌کند."
+
+#: includes/class-admin.php:312
+msgid "Manage widget appearance"
+msgstr "مدیریت ظاهر ویجت"
+
+#: includes/class-admin.php:315
+msgid "Save settings"
+msgstr "ذخیره تنظیمات"
+
+#: includes/class-admin.php:317
+msgid "Privacy"
+msgstr "حریم خصوصی"
+
+#: includes/class-admin.php:334
+msgid "WooCommerce page choices appear when WooCommerce is active."
+msgstr "گزینه‌های صفحات ووکامرس پس از فعال شدن ووکامرس نمایش داده می‌شوند."
+
+#: includes/class-admin.php:340
+msgid "Why does chat not appear?"
+msgstr "چرا چت نمایش داده نمی‌شود؟"
+
+#: includes/class-admin.php:340
+msgid "Check the saved key, enable switch, accepted service connection, active subscription and widget, allowed domain, display exclusions and device choice. With consent mode, your cookie manager must grant consent. In click mode, click the local button. Clear caches after saving."
+msgstr "کلید ذخیره‌شده، فعال‌سازی چت، پذیرش اتصال، اشتراک و ویجت فعال، دامنهٔ مجاز، استثناهای نمایش و دستگاه را بررسی کنید. در حالت رضایت، ابزار مدیریت کوکی باید اجازه دهد. در حالت کلیکی، دکمهٔ محلی را بزنید. پس از ذخیره کش را پاک کنید."
+
+#: includes/class-admin.php:341
+msgid "Where do I change colors and response hours?"
+msgstr "رنگ‌ها و ساعات پاسخ‌گویی را کجا تغییر دهم؟"
+
+#: includes/class-admin.php:341
+msgid "In the Hamgoo panel: Settings → Widget for appearance and Settings → Response hours for availability. The WordPress plugin uses those settings."
+msgstr "در پنل همگو، «تنظیمات ← ویجت» برای ظاهر و «تنظیمات ← ساعات پاسخ‌گویی» برای زمان دسترسی است. افزونهٔ وردپرس از همان تنظیمات استفاده می‌کند."
+
+#: includes/class-admin.php:342
+msgid "Can I use this without a Hamgoo account?"
+msgstr "بدون حساب همگو قابل استفاده است؟"
+
+#: includes/class-admin.php:342
+msgid "You can install and explore the settings, but live chat requires an active Hamgoo service and your own widget key. Visit Hamkaran for purchase and consultation."
+msgstr "می‌توانید افزونه را نصب و تنظیمات را بررسی کنید، اما چت آنلاین به سرویس فعال همگو و کلید ویجت خودتان نیاز دارد. برای خرید و مشاوره به همکاران مراجعه کنید."
+
+#: includes/class-admin.php:343
+msgid "How do I avoid duplicate widgets?"
+msgstr "چطور از نصب تکراری جلوگیری کنم؟"
+
+#: includes/class-admin.php:343
+msgid "Remove the earlier Hamkaran installation scripts from your theme, tag manager and other plugins. This loader avoids inserting the same script twice, but cannot reconcile different keys installed by another tool."
+msgstr "کد نصب قبلی همکاران را از قالب، تگ‌منیجر و افزونه‌های دیگر حذف کنید. بارگذار این افزونه اسکریپت یکسان را دوباره درج نمی‌کند، اما کلیدهای متفاوت نصب‌شده با ابزار دیگر را یکپارچه نمی‌کند."
+
+#: includes/class-admin.php:344
+msgid "What about cache and optimization plugins?"
+msgstr "با افزونه‌های کش و بهینه‌سازی چه کنم؟"
+
+#: includes/class-admin.php:344
+msgid "Clear page and CDN caches after changes. If JavaScript optimization breaks chat, exclude hamgoo-loader, HamgooLiveChatLoader and cp.hamkaran.cloud/widget/chat.js from combining or delayed execution. Selected loading and consent rules must still be preserved."
+msgstr "پس از تغییرات، کش صفحات و CDN را پاک کنید. اگر بهینه‌سازی جاوااسکریپت چت را مختل کرد، hamgoo-loader، HamgooLiveChatLoader و cp.hamkaran.cloud/widget/chat.js را از ادغام یا اجرای تأخیری مستثنا کنید. قواعد بارگذاری و رضایت باید حفظ شوند."
+
+#: includes/class-admin.php:345
+msgid "Does this improve Google rankings?"
+msgstr "این افزونه رتبهٔ گوگل را بهتر می‌کند؟"
+
+#: includes/class-admin.php:345
+msgid "Page exclusions and deferred loading reduce unnecessary work. The plugin does not change your SEO metadata or guarantee rankings. Test the final website performance, including the remote widget."
+msgstr "استثناهای نمایش و بارگذاری پس از صفحه، کار اضافی را کم می‌کنند. افزونه متادیتای سئو را تغییر نمی‌دهد و رتبه را تضمین نمی‌کند. عملکرد سایت نهایی، همراه با ویجت خارجی، باید بررسی شود."
+
+#: includes/class-admin.php:346
+msgid "Is the widget key a secret?"
+msgstr "کلید ویجت محرمانه است؟"
+
+#: includes/class-admin.php:346
+msgid "It is a public installation identifier visible in eligible website pages, not your panel password. Restrict allowed domains in Hamgoo. Never enter account passwords or private API tokens here."
+msgstr "این کلید شناسهٔ عمومی نصب است و در صفحات مجاز سایت دیده می‌شود؛ رمز پنل نیست. دامنه‌های مجاز را در همگو محدود کنید. رمز حساب و توکن خصوصی API را اینجا وارد نکنید."
+
+#: includes/class-admin.php:347
+msgid "Where are chats stored?"
+msgstr "گفتگوها کجا ذخیره می‌شوند؟"
+
+#: includes/class-admin.php:347
+msgid "Conversations are handled by the Hamkaran cloud service. This plugin stores connection and display settings in WordPress and does not copy chat messages into WordPress."
+msgstr "گفتگوها در سرویس ابری همکاران مدیریت می‌شوند. افزونه فقط تنظیمات اتصال و نمایش را در وردپرس نگه می‌دارد و پیام‌ها را در وردپرس کپی نمی‌کند."
+
+#: includes/class-admin.php:348
+msgid "Does it work with page builders and multisite?"
+msgstr "با صفحه‌ساز و وردپرس شبکه کار می‌کند؟"
+
+#: includes/class-admin.php:348
+msgid "It uses standard WordPress frontend hooks and requires the theme to call wp_head() and wp_footer(). Page builders do not need a separate integration. In multisite, each site has its own widget key and settings; configure sites individually."
+msgstr "از هوک‌های استاندارد وردپرس استفاده می‌کند و قالب باید wp_head() و wp_footer() را فراخوانی کند. صفحه‌ساز به اتصال جداگانه نیاز ندارد. در وردپرس شبکه، هر سایت کلید و تنظیمات مستقل دارد و باید جداگانه تنظیم شود."
+
+#: includes/class-frontend.php:33
+msgid "Chat with us"
+msgstr "گفتگو با ما"
+
+#: includes/class-frontend.php:34
+msgid "Connecting to chat…"
+msgstr "در حال اتصال به چت…"
+
+#: includes/class-frontend.php:35
+msgid "Chat could not load. Try again."
+msgstr "چت بارگذاری نشد؛ دوباره تلاش کنید."
+
+#: includes/class-rules.php:13
+msgid "Front page"
+msgstr "صفحهٔ اصلی"
+
+#: includes/class-rules.php:14
+msgid "Blog index"
+msgstr "صفحهٔ نوشته‌ها"
+
+#: includes/class-rules.php:15
+msgid "Archives"
+msgstr "آرشیوها"
+
+#: includes/class-rules.php:16
+msgid "Search results"
+msgstr "نتایج جست‌وجو"
+
+#: includes/class-rules.php:17
+msgid "404 pages"
+msgstr "صفحات ۴۰۴"
+
+#: includes/class-rules.php:18
+msgid "WooCommerce shop"
+msgstr "فروشگاه ووکامرس"
+
+#: includes/class-rules.php:19
+msgid "WooCommerce products"
+msgstr "محصولات ووکامرس"
+
+#: includes/class-rules.php:20
+msgid "WooCommerce product categories and tags"
+msgstr "دسته‌ها و برچسب‌های محصولات ووکامرس"
+
+#: includes/class-rules.php:21
+msgid "WooCommerce cart"
+msgstr "سبد خرید ووکامرس"
+
+#: includes/class-rules.php:22
+msgid "WooCommerce checkout"
+msgstr "تسویه‌حساب ووکامرس"
+
+#: includes/class-rules.php:23
+msgid "WooCommerce account"
+msgstr "حساب کاربری ووکامرس"
+
+#: includes/class-settings.php:60
+msgid "Enter only the widget key: cw_ followed by 32 letters or numbers. Do not paste the installation scripts."
+msgstr "فقط کلید ویجت را وارد کنید: cw_ و سپس ۳۲ حرف یا عدد انگلیسی. کدهای نصب را وارد نکنید."
+
+#: includes/class-settings.php:85
+msgid "Chat stays disabled until a valid widget key is saved and the external service connection is accepted."
+msgstr "تا ذخیرهٔ کلید معتبر و پذیرش اتصال به سرویس خارجی، چت غیرفعال می‌ماند."
+
+#: includes/class-settings.php:98
+msgid "Paths must start with / and contain no domain, query string, spaces or fragment. Use * as a wildcard."
+msgstr "مسیر باید با / شروع شود و دامنه، پارامتر آدرس، فاصله یا بخش پس از # نداشته باشد. برای تطبیق آزاد از * استفاده کنید."
+
+#: includes/class-settings.php:108
+msgid "When Hamgoo chat loads, the visitor browser connects to the Hamkaran cloud service. The service receives network information, including the IP address. When a visitor starts or resumes a chat, page URL, page title, referrer, browser, operating system and session information can be sent. Names, phone numbers, email addresses, messages and attachments supplied by the visitor are processed by the service. The widget uses localStorage and sessionStorage to maintain the chat session. Microphone access is requested only when recording a voice message. Chat records are stored by Hamkaran, not in this plugin's WordPress database. Review the service privacy policy and adapt this text to your site's actual configuration and consent requirements."
+msgstr "هنگام بارگذاری چت همگو، مرورگر بازدیدکننده به سرویس ابری همکاران متصل می‌شود و سرویس اطلاعات شبکه، از جمله IP، را دریافت می‌کند. با شروع یا ادامهٔ گفتگو ممکن است آدرس و عنوان صفحه، ارجاع‌دهنده، مرورگر، سیستم‌عامل و اطلاعات نشست ارسال شوند. نام، تلفن، ایمیل، پیام‌ها و پیوست‌هایی که بازدیدکننده وارد می‌کند در سرویس پردازش می‌شوند. ویجت از localStorage و sessionStorage برای حفظ نشست گفتگو استفاده می‌کند. دسترسی میکروفن فقط برای ضبط پیام صوتی درخواست می‌شود. گفتگوها نزد همکاران ذخیره می‌شوند، نه در پایگاه دادهٔ وردپرس این افزونه. حریم خصوصی سرویس را بخوانید و این متن را با تنظیمات واقعی سایت و الزامات رضایت خود هماهنگ کنید."

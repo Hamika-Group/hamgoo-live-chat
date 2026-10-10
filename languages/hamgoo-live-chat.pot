@@ -1,0 +1,631 @@
+# Hamgoo Live Chat. GPL-2.0-or-later.
+msgid ""
+msgstr "Project-Id-Version: Hamgoo Live Chat 1.0.0\nReport-Msgid-Bugs-To: https://hamkaran.cloud/\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Domain: hamgoo-live-chat\n"
+
+#: includes/class-admin.php:20 includes/class-admin.php:160
+msgid "Hamgoo Live Chat"
+msgstr ""
+
+#: includes/class-admin.php:20
+msgid "Hamgoo"
+msgstr ""
+
+#: includes/class-admin.php:37
+msgid "Settings"
+msgstr ""
+
+#: includes/class-admin.php:55
+msgid "Checking service configuration…"
+msgstr ""
+
+#: includes/class-admin.php:56
+msgid "Configuration received. Open your website and send a test message to verify the full connection and allowed domain."
+msgstr ""
+
+#: includes/class-admin.php:57
+msgid "The service refused this request. Check the subscription, widget status and allowed domain in Hamgoo."
+msgstr ""
+
+#: includes/class-admin.php:58
+msgid "Widget not found. Check the saved key and whether the widget is active."
+msgstr ""
+
+#: includes/class-admin.php:59
+msgid "The check could not complete. Check your network, browser privacy settings and service availability."
+msgstr ""
+
+#: includes/class-admin.php:60
+msgid "No published content found."
+msgstr ""
+
+#: includes/class-admin.php:61
+msgid "Search failed. Reload the page and try again."
+msgstr ""
+
+#: includes/class-admin.php:62 includes/class-admin.php:132
+msgid "Remove"
+msgstr ""
+
+#: includes/class-admin.php:63
+msgid "You have unsaved changes."
+msgstr ""
+
+#: includes/class-admin.php:64 includes/class-admin.php:315
+msgid "All settings are saved."
+msgstr ""
+
+#: includes/class-admin.php:122
+msgid "Search by title (at least 2 characters)"
+msgstr ""
+
+#: includes/class-admin.php:161
+msgid "Enabled on eligible pages"
+msgstr ""
+
+#: includes/class-admin.php:161
+msgid "Chat is disabled"
+msgstr ""
+
+#: includes/class-admin.php:161 includes/class-admin.php:297
+msgid "Open Hamgoo panel"
+msgstr ""
+
+#: includes/class-admin.php:166
+msgid "Plugin sections"
+msgstr ""
+
+#: includes/class-admin.php:169
+msgid "Connect & start"
+msgstr ""
+
+#: includes/class-admin.php:170
+msgid "Display rules"
+msgstr ""
+
+#: includes/class-admin.php:171
+msgid "Loading & privacy"
+msgstr ""
+
+#: includes/class-admin.php:172
+msgid "Guide & support"
+msgstr ""
+
+#: includes/class-admin.php:182
+msgid "A conversation starts here"
+msgstr ""
+
+#: includes/class-admin.php:182
+msgid "Be there when customers need you."
+msgstr ""
+
+#: includes/class-admin.php:182
+msgid "Connect your website to Hamgoo. Your team replies from the Hamkaran panel, and you decide where chat appears."
+msgstr ""
+
+#: includes/class-admin.php:182
+msgid "I have a widget key"
+msgstr ""
+
+#: includes/class-admin.php:186
+msgid "Connect your widget"
+msgstr ""
+
+#: includes/class-admin.php:186
+msgid "One key. No installation scripts or panel password."
+msgstr ""
+
+#: includes/class-admin.php:187
+msgid "Widget key"
+msgstr ""
+
+#: includes/class-admin.php:189
+msgid "In Hamgoo: Settings → Widget. Copy the key shown beside your widget. Only the cw_… value belongs here."
+msgstr ""
+
+#: includes/class-admin.php:190
+msgid "I accept connecting this site to the Hamkaran chat service."
+msgstr ""
+
+#: includes/class-admin.php:190
+msgid "The widget contacts an external service and processes visitor information when loaded. Read the privacy details before enabling."
+msgstr ""
+
+#: includes/class-admin.php:191 includes/class-settings.php:108
+msgid "Service privacy policy"
+msgstr ""
+
+#: includes/class-admin.php:191 includes/class-admin.php:317
+msgid "Service agreement"
+msgstr ""
+
+#: includes/class-admin.php:193
+msgid "Enable live chat"
+msgstr ""
+
+#: includes/class-admin.php:193
+msgid "Requires a valid saved key and acceptance of the service connection."
+msgstr ""
+
+#: includes/class-admin.php:194
+msgid "Check saved widget configuration"
+msgstr ""
+
+#: includes/class-admin.php:194
+msgid "Open website to test"
+msgstr ""
+
+#: includes/class-admin.php:195
+msgid "This check makes a request only when clicked, using the saved key. It checks configuration, not message delivery."
+msgstr ""
+
+#: includes/class-admin.php:199
+msgid "New to Hamgoo?"
+msgstr ""
+
+#: includes/class-admin.php:199
+msgid "Give your customers a direct line to your team."
+msgstr ""
+
+#: includes/class-admin.php:199
+msgid "An active Hamgoo service and a widget created in your account are required. Visit Hamkaran to learn about the service, purchase options and consultation."
+msgstr ""
+
+#: includes/class-admin.php:199
+msgid "Explore service & purchase"
+msgstr ""
+
+#: includes/class-admin.php:199
+msgid "Get consultation"
+msgstr ""
+
+#: includes/class-admin.php:203
+msgid "Plugin language"
+msgstr ""
+
+#: includes/class-admin.php:204
+msgid "Administration language"
+msgstr ""
+
+#: includes/class-admin.php:208
+msgid "Follow WordPress user language"
+msgstr ""
+
+#: includes/class-admin.php:218
+msgid "Changes only this plugin panel. Save to apply. Chat appearance and messages are managed in Hamgoo."
+msgstr ""
+
+#: includes/class-admin.php:222
+msgid "The right pages, the right moment"
+msgstr ""
+
+#: includes/class-admin.php:222
+msgid "Choose where chat appears."
+msgstr ""
+
+#: includes/class-admin.php:222
+msgid "Excluded pages never receive the chat loader. Exclusions always override inclusions."
+msgstr ""
+
+#: includes/class-admin.php:224
+msgid "Display scope"
+msgstr ""
+
+#: includes/class-admin.php:226
+msgid "All public pages"
+msgstr ""
+
+#: includes/class-admin.php:226
+msgid "Show throughout the website, except your exclusions."
+msgstr ""
+
+#: includes/class-admin.php:227
+msgid "Selected pages only"
+msgstr ""
+
+#: includes/class-admin.php:227
+msgid "A page must match at least one inclusion below."
+msgstr ""
+
+#: includes/class-admin.php:230
+msgid "Include individual pages or posts"
+msgstr ""
+
+#: includes/class-admin.php:231
+msgid "Search published content and select results. Selected items stay attached to their IDs even when their URLs change."
+msgstr ""
+
+#: includes/class-admin.php:232
+msgid "Include content types"
+msgstr ""
+
+#: includes/class-admin.php:237
+msgid "Include special pages"
+msgstr ""
+
+#: includes/class-admin.php:238
+msgid "Include paths"
+msgstr ""
+
+#: includes/class-admin.php:242
+msgid "Always exclude"
+msgstr ""
+
+#: includes/class-admin.php:242
+msgid "These rules apply in both display modes."
+msgstr ""
+
+#: includes/class-admin.php:243
+msgid "Exclude individual pages or posts"
+msgstr ""
+
+#: includes/class-admin.php:244
+msgid "Exclude special pages"
+msgstr ""
+
+#: includes/class-admin.php:245
+msgid "Exclude paths"
+msgstr ""
+
+#: includes/class-admin.php:246
+msgid "One path per line, relative to the WordPress home URL. /contact matches that page; /services/* matches paths inside services. Query strings are ignored and trailing slashes are equivalent. Use /* for every path. /services/* does not include /services itself."
+msgstr ""
+
+#: includes/class-admin.php:249
+msgid "Devices"
+msgstr ""
+
+#: includes/class-admin.php:253
+msgid "Mobile & desktop"
+msgstr ""
+
+#: includes/class-admin.php:254
+msgid "Mobile only"
+msgstr ""
+
+#: includes/class-admin.php:255
+msgid "Desktop only"
+msgstr ""
+
+#: includes/class-admin.php:260
+msgid "Mobile means a viewport up to 767px wide. The browser checks this before connecting, so cached pages can be shared safely between devices."
+msgstr ""
+
+#: includes/class-admin.php:264
+msgid "Keep your pages focused"
+msgstr ""
+
+#: includes/class-admin.php:264
+msgid "Control when chat connects."
+msgstr ""
+
+#: includes/class-admin.php:264
+msgid "The remote widget is requested only when the selected loading condition is met."
+msgstr ""
+
+#: includes/class-admin.php:266
+msgid "Loading strategy"
+msgstr ""
+
+#: includes/class-admin.php:269
+msgid "After the page loads · Recommended"
+msgstr ""
+
+#: includes/class-admin.php:269
+msgid "Wait for the window load event and an idle browser moment, with a short fallback timeout."
+msgstr ""
+
+#: includes/class-admin.php:270
+msgid "After a delay"
+msgstr ""
+
+#: includes/class-admin.php:270
+msgid "Wait the selected number of seconds after the page loads."
+msgstr ""
+
+#: includes/class-admin.php:271
+msgid "Only when the visitor clicks"
+msgstr ""
+
+#: includes/class-admin.php:271
+msgid "Show a lightweight local chat button. Load the service after it is clicked; the visitor can then open the Hamgoo widget."
+msgstr ""
+
+#: includes/class-admin.php:276
+msgid "Delay in seconds (0–120)"
+msgstr ""
+
+#: includes/class-admin.php:277
+msgid "These options can reduce initial network work. Search ranking and performance scores also depend on your theme, content and the remote widget."
+msgstr ""
+
+#: includes/class-admin.php:280
+msgid "Visitor privacy"
+msgstr ""
+
+#: includes/class-admin.php:281
+msgid "Wait for consent from my cookie manager"
+msgstr ""
+
+#: includes/class-admin.php:281
+msgid "No remote connection or local chat button appears until your consent integration allows chat. This plugin does not provide a cookie banner."
+msgstr ""
+
+#: includes/class-admin.php:282
+msgid "When this option is enabled, your consent manager must call window.HamgooLiveChat.grantConsent() after approval and window.HamgooLiveChat.revokeConsent() after withdrawal. Existing chats are stopped on reload after withdrawal; an already loaded third-party widget cannot be fully unloaded by this plugin."
+msgstr ""
+
+#: includes/class-admin.php:283
+msgid "Consent is kept in memory for this page only. Your consent manager should apply the visitor choice on every page. Until it grants consent, chat remains unavailable."
+msgstr ""
+
+#: includes/class-admin.php:284
+msgid "When loaded, the widget contacts Hamkaran and the realtime provider. Chat can send page URL, title, referrer, browser, operating system, session details and visitor-entered contact information, messages and files. Browser storage maintains the conversation. Voice recording requests microphone permission."
+msgstr ""
+
+#: includes/class-admin.php:285
+msgid "Read the service privacy policy"
+msgstr ""
+
+#: includes/class-admin.php:286
+msgid "Suggested disclosure text is available in WordPress Settings → Privacy. Adapt it to your site and service configuration."
+msgstr ""
+
+#: includes/class-admin.php:287
+msgid "Delete plugin settings when uninstalling"
+msgstr ""
+
+#: includes/class-admin.php:287
+msgid "Deactivation keeps settings. Uninstalling with this option enabled removes settings only on this site; cloud conversations are unaffected."
+msgstr ""
+
+#: includes/class-admin.php:291
+msgid "A clear path to your first conversation"
+msgstr ""
+
+#: includes/class-admin.php:291
+msgid "Setup guide & answers"
+msgstr ""
+
+#: includes/class-admin.php:291
+msgid "Appearance and agent replies are managed in Hamgoo. WordPress manages installation and page rules."
+msgstr ""
+
+#: includes/class-admin.php:292
+msgid "Start in four steps"
+msgstr ""
+
+#: includes/class-admin.php:293
+msgid "Activate the Hamgoo service in your Hamkaran account. Open Settings → Widget, create an active widget and add your website to its allowed domains."
+msgstr ""
+
+#: includes/class-admin.php:294
+msgid "Copy the widget key shown beside the widget, enter it in Connect & start, accept the service connection and enable chat."
+msgstr ""
+
+#: includes/class-admin.php:295
+msgid "Choose display rules and a loading strategy, then save. Remove any older copy of the installation scripts from your theme, tag manager or code-insertion plugin."
+msgstr ""
+
+#: includes/class-admin.php:296
+msgid "Clear your page cache. Open an eligible page as a visitor, start a conversation and confirm that your team receives and can reply to the message in Hamgoo."
+msgstr ""
+
+#: includes/class-admin.php:303
+msgid "Need a hand?"
+msgstr ""
+
+#: includes/class-admin.php:303
+msgid "Existing customers can contact support through the Hamkaran panel. For service information, purchase or consultation, visit the Hamkaran website."
+msgstr ""
+
+#: includes/class-admin.php:303
+msgid "Support in your panel"
+msgstr ""
+
+#: includes/class-admin.php:303
+msgid "Service & consultation"
+msgstr ""
+
+#: includes/class-admin.php:307
+msgid "YOUR CHAT SETUP"
+msgstr ""
+
+#: includes/class-admin.php:307
+msgid "Ready for a conversation?"
+msgstr ""
+
+#: includes/class-admin.php:308
+msgid "Widget key saved"
+msgstr ""
+
+#: includes/class-admin.php:308
+msgid "Add your widget key"
+msgstr ""
+
+#: includes/class-admin.php:309
+msgid "Chat enabled"
+msgstr ""
+
+#: includes/class-admin.php:309
+msgid "Enable chat after setup"
+msgstr ""
+
+#: includes/class-admin.php:310
+msgid "All pages, with exclusions"
+msgstr ""
+
+#: includes/class-admin.php:310
+msgid "Only selected pages"
+msgstr ""
+
+#: includes/class-admin.php:311
+msgid "Illustrative preview. Actual widget colors, position and messages come from your Hamgoo settings."
+msgstr ""
+
+#: includes/class-admin.php:312
+msgid "Your brand, your conversation"
+msgstr ""
+
+#: includes/class-admin.php:312
+msgid "Change colors, welcome text, launcher position and response hours in the Hamgoo panel. Changes there are used by your connected widget."
+msgstr ""
+
+#: includes/class-admin.php:312
+msgid "Manage widget appearance"
+msgstr ""
+
+#: includes/class-admin.php:315
+msgid "Save settings"
+msgstr ""
+
+#: includes/class-admin.php:317
+msgid "Privacy"
+msgstr ""
+
+#: includes/class-admin.php:334
+msgid "WooCommerce page choices appear when WooCommerce is active."
+msgstr ""
+
+#: includes/class-admin.php:340
+msgid "Why does chat not appear?"
+msgstr ""
+
+#: includes/class-admin.php:340
+msgid "Check the saved key, enable switch, accepted service connection, active subscription and widget, allowed domain, display exclusions and device choice. With consent mode, your cookie manager must grant consent. In click mode, click the local button. Clear caches after saving."
+msgstr ""
+
+#: includes/class-admin.php:341
+msgid "Where do I change colors and response hours?"
+msgstr ""
+
+#: includes/class-admin.php:341
+msgid "In the Hamgoo panel: Settings → Widget for appearance and Settings → Response hours for availability. The WordPress plugin uses those settings."
+msgstr ""
+
+#: includes/class-admin.php:342
+msgid "Can I use this without a Hamgoo account?"
+msgstr ""
+
+#: includes/class-admin.php:342
+msgid "You can install and explore the settings, but live chat requires an active Hamgoo service and your own widget key. Visit Hamkaran for purchase and consultation."
+msgstr ""
+
+#: includes/class-admin.php:343
+msgid "How do I avoid duplicate widgets?"
+msgstr ""
+
+#: includes/class-admin.php:343
+msgid "Remove the earlier Hamkaran installation scripts from your theme, tag manager and other plugins. This loader avoids inserting the same script twice, but cannot reconcile different keys installed by another tool."
+msgstr ""
+
+#: includes/class-admin.php:344
+msgid "What about cache and optimization plugins?"
+msgstr ""
+
+#: includes/class-admin.php:344
+msgid "Clear page and CDN caches after changes. If JavaScript optimization breaks chat, exclude hamgoo-loader, HamgooLiveChatLoader and cp.hamkaran.cloud/widget/chat.js from combining or delayed execution. Selected loading and consent rules must still be preserved."
+msgstr ""
+
+#: includes/class-admin.php:345
+msgid "Does this improve Google rankings?"
+msgstr ""
+
+#: includes/class-admin.php:345
+msgid "Page exclusions and deferred loading reduce unnecessary work. The plugin does not change your SEO metadata or guarantee rankings. Test the final website performance, including the remote widget."
+msgstr ""
+
+#: includes/class-admin.php:346
+msgid "Is the widget key a secret?"
+msgstr ""
+
+#: includes/class-admin.php:346
+msgid "It is a public installation identifier visible in eligible website pages, not your panel password. Restrict allowed domains in Hamgoo. Never enter account passwords or private API tokens here."
+msgstr ""
+
+#: includes/class-admin.php:347
+msgid "Where are chats stored?"
+msgstr ""
+
+#: includes/class-admin.php:347
+msgid "Conversations are handled by the Hamkaran cloud service. This plugin stores connection and display settings in WordPress and does not copy chat messages into WordPress."
+msgstr ""
+
+#: includes/class-admin.php:348
+msgid "Does it work with page builders and multisite?"
+msgstr ""
+
+#: includes/class-admin.php:348
+msgid "It uses standard WordPress frontend hooks and requires the theme to call wp_head() and wp_footer(). Page builders do not need a separate integration. In multisite, each site has its own widget key and settings; configure sites individually."
+msgstr ""
+
+#: includes/class-frontend.php:33
+msgid "Chat with us"
+msgstr ""
+
+#: includes/class-frontend.php:34
+msgid "Connecting to chat…"
+msgstr ""
+
+#: includes/class-frontend.php:35
+msgid "Chat could not load. Try again."
+msgstr ""
+
+#: includes/class-rules.php:13
+msgid "Front page"
+msgstr ""
+
+#: includes/class-rules.php:14
+msgid "Blog index"
+msgstr ""
+
+#: includes/class-rules.php:15
+msgid "Archives"
+msgstr ""
+
+#: includes/class-rules.php:16
+msgid "Search results"
+msgstr ""
+
+#: includes/class-rules.php:17
+msgid "404 pages"
+msgstr ""
+
+#: includes/class-rules.php:18
+msgid "WooCommerce shop"
+msgstr ""
+
+#: includes/class-rules.php:19
+msgid "WooCommerce products"
+msgstr ""
+
+#: includes/class-rules.php:20
+msgid "WooCommerce product categories and tags"
+msgstr ""
+
+#: includes/class-rules.php:21
+msgid "WooCommerce cart"
+msgstr ""
+
+#: includes/class-rules.php:22
+msgid "WooCommerce checkout"
+msgstr ""
+
+#: includes/class-rules.php:23
+msgid "WooCommerce account"
+msgstr ""
+
+#: includes/class-settings.php:60
+msgid "Enter only the widget key: cw_ followed by 32 letters or numbers. Do not paste the installation scripts."
+msgstr ""
+
+#: includes/class-settings.php:85
+msgid "Chat stays disabled until a valid widget key is saved and the external service connection is accepted."
+msgstr ""
+
+#: includes/class-settings.php:98
+msgid "Paths must start with / and contain no domain, query string, spaces or fragment. Use * as a wildcard."
+msgstr ""
+
+#: includes/class-settings.php:108
+msgid "When Hamgoo chat loads, the visitor browser connects to the Hamkaran cloud service. The service receives network information, including the IP address. When a visitor starts or resumes a chat, page URL, page title, referrer, browser, operating system and session information can be sent. Names, phone numbers, email addresses, messages and attachments supplied by the visitor are processed by the service. The widget uses localStorage and sessionStorage to maintain the chat session. Microphone access is requested only when recording a voice message. Chat records are stored by Hamkaran, not in this plugin's WordPress database. Review the service privacy policy and adapt this text to your site's actual configuration and consent requirements."
+msgstr ""
