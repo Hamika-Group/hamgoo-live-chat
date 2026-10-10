@@ -2,7 +2,7 @@
 Contributors:
 Tags: live chat, customer support, hamgoo, woocommerce, chat
 Requires at least: 6.5
-Tested up to: 7.1.3
+Tested up to: 7.1
 Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPLv2 or later
