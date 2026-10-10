@@ -104,7 +104,7 @@ python3 scripts/translations.py
 git diff --exit-code -- languages
 python3 scripts/verify.py
 php scripts/preview.php
-python3 scripts/package.py --tag v1.0.0
+python3 scripts/package.py --tag v1.0.1
 ```
 
 Translation source: `languages/translations.json`. Generation produces PO/MO/POT and fails on incomplete translations. Static previews are written to `docs/*-preview.html`; real search and connectivity need WordPress.
@@ -114,9 +114,9 @@ Optional integration check: `wp eval-file tests/wordpress-smoke.php`, **only in 
 Keep the main file's Version and HAMGOO_VERSION, readme.txt's Stable tag and release tag consistent. Update the changelog and checks, commit, then:
 
 ```sh
-git tag v1.0.0
+git tag v1.0.1
 git push origin main
-git push origin v1.0.0
+git push origin v1.0.1
 ```
 
 [CI](../.github/workflows/ci.yml) checks code, translations and the packaged plugin. [Release](../.github/workflows/release.yml) publishes the installable ZIP and SHA256SUMS after checks pass. Actions also supports manual runs using an existing stable tag. A rerun updates assets on the same release; never move a published tag. Download both files together and run `sha256sum --check SHA256SUMS`. The ZIP excludes tests, vendor, development docs and workflows.
@@ -124,3 +124,5 @@ git push origin v1.0.0
 The WordPress.org publisher account/slug are pending. Contributors remains empty until the real username is supplied; normal CI exempts only that warning while empty. WordPress publication requires full checks. After approval, configure the username, artwork and SVN secrets using the [release guide](release-fa.md). The [manual SVN workflow](../.github/workflows/wordpress.yml) verifies the GitHub package checksum and publishes it to WordPress.org. Updates use WordPress.org; there is no custom GitHub updater.
 
 Source and bundled SVGs: **GPL-2.0-or-later**, see [LICENSE](../LICENSE). Replacement artwork must have a compatible license. [readme.txt](../readme.txt) is the standard marketplace listing.
+
+The Hamgoo administration page uses locally bundled **Vazirmatn v33.003**, without a font CDN. Its [SIL Open Font License 1.1](../assets/fonts/vazirmatn/OFL.txt) ships in the package; see [source and asset details](third-party.md).

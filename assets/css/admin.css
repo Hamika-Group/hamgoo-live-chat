@@ -1,4 +1,13 @@
 /* Hamkaran palette: navy #00325a, blue #1b5c9e, accent #3086db. */
+/* Bundled Vazirmatn v33.003; SIL Open Font License 1.1 (../fonts/vazirmatn/OFL.txt). */
+@font-face {
+  font-family: "Hamgoo Vazirmatn";
+  src: url("../fonts/vazirmatn/Vazirmatn-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 .hg-app {
   --hg-navy: #00325a;
   --hg-blue: #1b5c9e;
@@ -10,8 +19,9 @@
   max-width: 1460px;
   margin: 24px 20px 0 0;
   color: var(--hg-text);
-  font: 400 14px/1.85 -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Arial, sans-serif;
+  font: 400 14px/1.85 "Hamgoo Vazirmatn", -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Arial, sans-serif;
 }
+.hg-app button, .hg-app input, .hg-app select, .hg-app textarea { font-family: inherit; }
 .hg-app *, .hg-app *::before, .hg-app *::after { box-sizing: border-box; }
 .hg-app [hidden] { display: none !important; }
 .hg-app h1, .hg-app h2, .hg-app h3, .hg-app p { margin: 0; }

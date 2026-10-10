@@ -102,7 +102,7 @@ python3 scripts/translations.py
 git diff --exit-code -- languages
 python3 scripts/verify.py
 php scripts/preview.php
-python3 scripts/package.py --tag v1.0.0
+python3 scripts/package.py --tag v1.0.1
 ```
 
 Источник переводов — `languages/translations.json`. Генерация PO/MO/POT завершается ошибкой при неполных переводах. Статические макеты создаются в `docs/*-preview.html`; реальный поиск и связь требуют WordPress.
@@ -112,9 +112,9 @@ python3 scripts/package.py --tag v1.0.0
 Согласуйте Version и HAMGOO_VERSION главного файла, Stable tag в readme.txt и тег выпуска. Обновите журнал изменений и проверки, сделайте commit:
 
 ```sh
-git tag v1.0.0
+git tag v1.0.1
 git push origin main
-git push origin v1.0.0
+git push origin v1.0.1
 ```
 
 [CI](../.github/workflows/ci.yml) проверяет код, переводы и пакет. [Release](../.github/workflows/release.yml) публикует ZIP и SHA256SUMS после успешных проверок. Ручной запуск Actions принимает существующий стабильный тег. Повтор обновляет файлы того же выпуска; не перемещайте опубликованный тег. Скачайте оба файла вместе и выполните `sha256sum --check SHA256SUMS`. ZIP не содержит тестов, vendor, документации разработки и workflow.
@@ -122,3 +122,5 @@ git push origin v1.0.0
 Аккаунт издателя и идентификатор WordPress.org ещё не подтверждены. Contributors пуст до получения реального имени; обычный CI исключает только это предупреждение, пока поле пусто. Публикация WordPress требует полной проверки. После одобрения настройте имя, изображения и секреты SVN по [инструкции](release-fa.md). [Ручной workflow](../.github/workflows/wordpress.yml) проверяет checksum и публикует в SVN. Обновления через WordPress.org; отдельного обновлятора GitHub нет.
 
 Код и SVG: **GPL-2.0-or-later**, см. [LICENSE](../LICENSE). Новые изображения должны иметь совместимую лицензию. [readme.txt](../readme.txt) содержит стандартное описание каталога.
+
+Панель Hamgoo использует локально поставляемый **Vazirmatn v33.003**, без CDN шрифтов. В пакет включена [лицензия SIL Open Font License 1.1](../assets/fonts/vazirmatn/OFL.txt); см. [источник и сведения о файле](third-party.md).

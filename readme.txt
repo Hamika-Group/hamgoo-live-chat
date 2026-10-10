@@ -4,7 +4,7 @@ Tags: live chat, customer support, hamgoo, woocommerce, chat
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,10 +15,8 @@ Connect Hamgoo chat with a widget key. Control pages, WooCommerce rules and load
 Hamgoo Live Chat connects a WordPress website to the Hamkaran cloud chat service.
 Your team handles conversations in the Hamkaran panel. The plugin manages installation, page rules and loading.
 
-This is the integration for the Hamgoo service, not a general-purpose script editor.
-It connects visitors to your Hamgoo team's conversations and replies, with WordPress page and WooCommerce rules, consent integration and five plugin languages.
-All page rules, loading modes, languages and consent features included in this plugin are available without a plugin license or upgrade.
-The widget key identifies a real hosted chat service; it is not used to unlock local plugin features.
+This dedicated Hamgoo integration connects visitors to your team's conversations and replies.
+All included plugin features are free without a plugin license or upgrade. The widget key identifies the hosted service and does not unlock local features.
 
 Source code and development instructions: https://github.com/Hamika-Group/hamgoo-live-chat
 
@@ -45,7 +43,9 @@ Features:
 * Per-site settings in multisite. No custom database tables.
 * Suggested privacy-policy text and optional settings removal on uninstall.
 
-The plugin panel uses the Hamkaran brand palette. Actual chat colors, text, position, response hours and agent behavior are configured in Hamgoo.
+The plugin panel uses the Hamkaran brand palette and locally bundled Vazirmatn v33.003, licensed under SIL Open Font License 1.1 (assets/fonts/vazirmatn/OFL.txt).
+Font source: https://github.com/rastikerdar/vazirmatn
+Actual chat colors, text, position, response hours and agent behavior are configured in Hamgoo.
 Bundled translations cover the WordPress plugin; they do not translate the remote chat service.
 
 == External services ==
@@ -145,6 +145,11 @@ Preserve the configured loading and consent rules. The theme must use wp_head() 
 
 == Changelog ==
 
+= 1.0.1 =
+
+* Bundle Vazirmatn locally for administration text and controls, with its SIL Open Font License.
+* Refresh asset cache versions; load text immediately while the font is loading.
+
 = 1.0.0 =
 
 * Initial release: widget-key connection, page and WooCommerce rules, device targeting and three loading modes.
@@ -152,6 +157,10 @@ Preserve the configured loading and consent rules. The theme must use wp_head() 
 * Optional consent integration, setup guide and privacy disclosure.
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+
+Adds locally bundled Vazirmatn to the Hamgoo administration page. No font CDN is required.
 
 = 1.0.0 =
 

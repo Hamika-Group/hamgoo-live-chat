@@ -7,6 +7,7 @@ import struct
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
+VERSION = re.search(r"^ \* Version: (\d+\.\d+\.\d+)$", (ROOT / "hamgoo-live-chat.php").read_text(encoding="utf-8"), re.M).group(1)
 PATTERN = re.compile(
     r"(?:__|esc_html__|esc_attr__|esc_html_e|esc_attr_e)\(\s*'((?:\\.|[^'\\])*)'\s*,\s*'hamgoo-live-chat'"
 )
@@ -37,7 +38,7 @@ def header(locale):
         "ur": "nplurals=2; plural=(n != 1);",
     }
     return (
-        "Project-Id-Version: Hamgoo Live Chat 1.0.0\n"
+        f"Project-Id-Version: Hamgoo Live Chat {VERSION}\n"
         "Report-Msgid-Bugs-To: https://hamkaran.cloud/\n"
         "MIME-Version: 1.0\n"
         "Content-Type: text/plain; charset=UTF-8\n"

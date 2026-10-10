@@ -102,7 +102,7 @@ python3 scripts/translations.py
 git diff --exit-code -- languages
 python3 scripts/verify.py
 php scripts/preview.php
-python3 scripts/package.py --tag v1.0.0
+python3 scripts/package.py --tag v1.0.1
 ```
 
 ترجمے کا ماخذ `languages/translations.json` ہے؛ PO/MO/POT بنتے ہیں اور نامکمل ترجمے پر جانچ ناکام ہوتی ہے۔ جامد پیش منظر `docs/*-preview.html` میں ہیں؛ اصل تلاش اور رابطے کے لیے ورڈپریس چاہیے۔
@@ -112,9 +112,9 @@ python3 scripts/package.py --tag v1.0.0
 مرکزی فائل کے Version اور HAMGOO_VERSION، readme.txt کے Stable tag اور ریلیز tag کو یکساں کریں۔ changelog اور جانچ تازہ کرکے commit کریں:
 
 ```sh
-git tag v1.0.0
+git tag v1.0.1
 git push origin main
-git push origin v1.0.0
+git push origin v1.0.1
 ```
 
 [CI](../.github/workflows/ci.yml) کوڈ، ترجمے اور پیکیج جانچتا ہے۔ [Release](../.github/workflows/release.yml) کامیابی پر ZIP اور SHA256SUMS شائع کرتا ہے؛ Actions سے موجودہ مستحکم tag پر دستی اجرا بھی ممکن ہے۔ دوبارہ اجرا اسی ریلیز کی فائلیں تازہ کرتا ہے؛ شائع شدہ tag نہ بدلیں۔ دونوں فائلیں ایک جگہ حاصل کرکے `sha256sum --check SHA256SUMS` چلائیں۔ ZIP میں tests، vendor، ترقیاتی دستاویز یا workflow شامل نہیں۔
@@ -122,3 +122,5 @@ git push origin v1.0.0
 WordPress.org ناشر اکاؤنٹ اور شناخت ابھی منظور نہیں ہوئے۔ اصل صارف نام آنے تک Contributors خالی ہے؛ عام CI صرف خالی ہونے کی اس تنبیہ کو مستثنیٰ کرتا ہے۔ ورڈپریس اشاعت کے لیے مکمل جانچ ضروری ہے۔ منظوری کے بعد [ریلیز رہنما](release-fa.md) کے مطابق نام، تصاویر اور SVN secrets مقرر کریں۔ [دستی workflow](../.github/workflows/wordpress.yml) checksum جانچ کر SVN پر شائع کرتا ہے۔ اپ ڈیٹ WordPress.org سے ہوتا ہے؛ الگ GitHub updater نہیں۔
 
 کوڈ اور SVG **GPL-2.0-or-later** ہیں؛ [LICENSE](../LICENSE) دیکھیں۔ نئی تصاویر کا لائسنس موافق ہونا چاہیے۔ [readme.txt](../readme.txt) مارکیٹ کی معیاری تفصیل ہے۔
+
+ہمگو کا انتظامی پینل پلگ ان میں شامل مقامی **Vazirmatn v33.003** فونٹ استعمال کرتا ہے؛ فونٹ CDN کی ضرورت نہیں۔ [SIL Open Font License 1.1](../assets/fonts/vazirmatn/OFL.txt) پیکیج میں شامل ہے؛ [ماخذ اور فائل کی تفصیلات](third-party.md) دیکھیں۔

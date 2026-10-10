@@ -102,7 +102,7 @@ python3 scripts/translations.py
 git diff --exit-code -- languages
 python3 scripts/verify.py
 php scripts/preview.php
-python3 scripts/package.py --tag v1.0.0
+python3 scripts/package.py --tag v1.0.1
 ```
 
 مصدر الترجمة `languages/translations.json`؛ تُنتج PO/MO/POT ويفشل التحقق عند نقص الترجمة. المعاينات الثابتة في `docs/*-preview.html`؛ البحث والاتصال الفعليان يحتاجان ووردبريس.
@@ -112,9 +112,9 @@ python3 scripts/package.py --tag v1.0.0
 وحّد Version وHAMGOO_VERSION في الملف الرئيسي مع Stable tag في readme.txt ووسم الإصدار. حدّث سجل التغييرات والاختبارات، ثم commit:
 
 ```sh
-git tag v1.0.0
+git tag v1.0.1
 git push origin main
-git push origin v1.0.0
+git push origin v1.0.1
 ```
 
 يتحقق [CI](../.github/workflows/ci.yml) من الكود والترجمات والحزمة. ينشر [Release](../.github/workflows/release.yml) ZIP وSHA256SUMS بعد النجاح؛ يمكن تشغيله يدويًا لوسم مستقر موجود. إعادة التشغيل تحدّث ملفات الإصدار نفسه؛ لا تحرّك وسمًا منشورًا. نزّل الملفين معًا وشغّل `sha256sum --check SHA256SUMS`. تُستبعد الاختبارات وvendor والمستندات وworkflow من ZIP.
@@ -122,3 +122,5 @@ git push origin v1.0.0
 حساب الناشر ومعرّف WordPress.org قيد الانتظار. يبقى Contributors فارغًا حتى توفير الاسم الحقيقي؛ CI العادي يستثني هذا التحذير وحده عندما يكون فارغًا. نشر ووردبريس يتطلب الفحص الكامل. بعد الموافقة، اضبط الاسم والصور وأسرار SVN وفق [دليل النشر](release-fa.md). [workflow اليدوي](../.github/workflows/wordpress.yml) يتحقق من checksum وينشر إلى SVN. التحديثات عبر WordPress.org؛ لا يوجد محدّث GitHub خاص.
 
 الكود وSVG تحت **GPL-2.0-or-later**؛ راجع [LICENSE](../LICENSE). يجب أن تكون الصور البديلة بترخيص متوافق. [readme.txt](../readme.txt) نص قائمة المتجر.
+
+تستخدم لوحة همگو خط **Vazirmatn v33.003** المضمّن محليًا دون الحاجة إلى CDN للخطوط. تتضمن الحزمة [ترخيص SIL Open Font License 1.1](../assets/fonts/vazirmatn/OFL.txt)؛ راجع [المصدر وتفاصيل الملف](third-party.md).

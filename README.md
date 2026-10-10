@@ -134,7 +134,7 @@ python3 scripts/translations.py
 git diff --exit-code -- languages
 python3 scripts/verify.py
 php scripts/preview.php
-python3 scripts/package.py --tag v1.0.0
+python3 scripts/package.py --tag v1.0.1
 ```
 
 منبع ترجمه `languages/translations.json` است؛ اسکریپت، PO/MO/POT تولید می‌کند و ترجمه ناقص بررسی را شکست می‌دهد. پیش‌نمایش‌های ثابت در `docs/*-preview.html` ساخته می‌شوند؛ اتصال واقعی و جست‌وجو نیازمند وردپرس‌اند.
@@ -155,9 +155,9 @@ wp eval-file tests/wordpress-smoke.php
 2. تغییرات را commit و push و تگ همان commit را ارسال کنید:
 
 ```sh
-git tag v1.0.0
+git tag v1.0.1
 git push origin main
-git push origin v1.0.0
+git push origin v1.0.1
 ```
 
 3. نتیجه را در Actions و Releases بررسی کنید. تگ عمومی را جابه‌جا نکنید. اجرای دوباره همان نسخه، فایل‌های همان Release را به‌روزرسانی می‌کند.
@@ -179,3 +179,5 @@ ZIP فقط فایل‌های اجرا، کاتالوگ‌ها و مجوز را �
 پس از ساخت حساب و پذیرش افزونه، نام کاربری، تصاویر و اسرار SVN را طبق [راهنمای انتشار](docs/release-fa.md) تنظیم کنید. [workflow وردپرس](.github/workflows/wordpress.yml) دستی است و بسته تأییدشده GitHub را با بررسی checksum به SVN می‌فرستد. به‌روزرسانی از WordPress.org انجام می‌شود؛ updater اختصاصی GitHub نداریم.
 
 کد و SVGهای همراه **GPL-2.0-or-later** هستند؛ [مجوز](LICENSE) را ببینید. تصاویر جایگزین باید مجوز سازگار داشته باشند. متن استاندارد مارکت در [readme.txt](readme.txt) نگهداری می‌شود.
+
+پنل همگو از فونت وزیرمتن **v33.003** داخل افزونه استفاده می‌کند و به CDN فونت نیاز ندارد. فونت با [مجوز SIL Open Font License 1.1](assets/fonts/vazirmatn/OFL.txt) همراه بسته است؛ [منبع و مشخصات فایل](docs/third-party.md) ثبت شده‌اند.
