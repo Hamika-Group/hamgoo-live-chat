@@ -1,10 +1,10 @@
 === Hamgoo Live Chat ===
-Contributors:
+Contributors: hamika
 Tags: live chat, customer support, hamgoo, woocommerce, chat
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -145,6 +145,11 @@ Preserve the configured loading and consent rules. The theme must use wp_head() 
 
 == Changelog ==
 
+= 1.0.3 =
+
+* Correct plugin and author links and identify the WordPress.org contributor.
+* Refresh release metadata and translations for the WordPress.org submission.
+
 = 1.0.2 =
 
 * Override WordPress RTL heading fonts in Hamgoo and apply Vazirmatn to its menu title.
@@ -161,6 +166,10 @@ Preserve the configured loading and consent rules. The theme must use wp_head() 
 * Optional consent integration, setup guide and privacy disclosure.
 
 == Upgrade Notice ==
+
+= 1.0.3 =
+
+Updates release and WordPress.org listing information.
 
 = 1.0.2 =
 

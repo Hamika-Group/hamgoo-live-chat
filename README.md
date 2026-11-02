@@ -134,7 +134,7 @@ python3 scripts/translations.py
 git diff --exit-code -- languages
 python3 scripts/verify.py
 php scripts/preview.php
-python3 scripts/package.py --tag v1.0.2
+python3 scripts/package.py --tag v1.0.3
 ```
 
 منبع ترجمه `languages/translations.json` است؛ اسکریپت، PO/MO/POT تولید می‌کند و ترجمه ناقص بررسی را شکست می‌دهد. پیش‌نمایش‌های ثابت در `docs/*-preview.html` ساخته می‌شوند؛ اتصال واقعی و جست‌وجو نیازمند وردپرس‌اند.
@@ -155,9 +155,9 @@ wp eval-file tests/wordpress-smoke.php
 2. تغییرات را commit و push و تگ همان commit را ارسال کنید:
 
 ```sh
-git tag v1.0.2
+git tag v1.0.3
 git push origin main
-git push origin v1.0.2
+git push origin v1.0.3
 ```
 
 3. نتیجه را در Actions و Releases بررسی کنید. تگ عمومی را جابه‌جا نکنید. اجرای دوباره همان نسخه، فایل‌های همان Release را به‌روزرسانی می‌کند.
@@ -174,9 +174,9 @@ ZIP فقط فایل‌های اجرا، کاتالوگ‌ها و مجوز را �
 
 بررسی موارد فرم ارسال، مالکیت، سرویس ابری و پیش‌نیازهای باقی‌مانده در [گزارش بررسی وردپرس](docs/wordpress-submission-review-fa.md) آمده است.
 
-حساب منتشرکننده و شناسه افزونه در WordPress.org هنوز تأیید نشده‌اند؛ `Contributors` تا دریافت نام کاربری واقعی خالی است. CI معمول فقط همین هشدار را هنگام خالی‌بودن آن مستثنا می‌کند؛ انتشار وردپرس بررسی کامل را لازم دارد.
+نام کاربری منتشرکننده `hamika` در `Contributors` ثبت شده است. شناسه افزونه و پذیرش آن در WordPress.org همچنان به تأیید وردپرس نیاز دارند؛ انتشار وردپرس بررسی کامل را لازم دارد.
 
-پس از ساخت حساب و پذیرش افزونه، نام کاربری، تصاویر و اسرار SVN را طبق [راهنمای انتشار](docs/release-fa.md) تنظیم کنید. [workflow وردپرس](.github/workflows/wordpress.yml) دستی است و بسته تأییدشده GitHub را با بررسی checksum به SVN می‌فرستد. به‌روزرسانی از WordPress.org انجام می‌شود؛ updater اختصاصی GitHub نداریم.
+پس از پذیرش افزونه، تصاویر و اسرار SVN را طبق [راهنمای انتشار](docs/release-fa.md) تنظیم کنید. [workflow وردپرس](.github/workflows/wordpress.yml) دستی است و بسته تأییدشده GitHub را با بررسی checksum به SVN می‌فرستد. به‌روزرسانی از WordPress.org انجام می‌شود؛ updater اختصاصی GitHub نداریم.
 
 کد و SVGهای همراه **GPL-2.0-or-later** هستند؛ [مجوز](LICENSE) را ببینید. تصاویر جایگزین باید مجوز سازگار داشته باشند. متن استاندارد مارکت در [readme.txt](readme.txt) نگهداری می‌شود.
 

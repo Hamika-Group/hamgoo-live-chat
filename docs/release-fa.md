@@ -2,7 +2,7 @@
 
 ## وضعیت نسخه اول
 
-افزونه در پوشه مستقل hamgoo-live-chat ساخته شده و مخزن آن [Hamika-Group/hamgoo-live-chat](https://github.com/Hamika-Group/hamgoo-live-chat) است. تصاویر محلی SVG موقت‌اند و WebP نهایی با همان نام‌ها جایگزینشان می‌شود. حساب WordPress.org هنوز ارائه نشده است؛ Contributors در readme.txt عمداً خالی است. پیش از ارسال به مارکت، نام کاربری واقعی منتشرکننده را اضافه کنید.
+افزونه در پوشه مستقل hamgoo-live-chat ساخته شده و مخزن آن [Hamika-Group/hamgoo-live-chat](https://github.com/Hamika-Group/hamgoo-live-chat) است. تصاویر محلی SVG موقت‌اند و WebP نهایی با همان نام‌ها جایگزینشان می‌شود. نام کاربری WordPress.org یعنی `hamika` در Contributors ثبت شده است؛ پذیرش افزونه و شناسه نهایی با WordPress.org است.
 
 ## بررسی و ساخت بسته
 
@@ -17,9 +17,9 @@
     python3 scripts/translations.py
     python3 scripts/verify.py
     python3 tests/package.test.py
-    python3 scripts/package.py --tag v1.0.2 --checksum
+    python3 scripts/package.py --tag v1.0.3 --checksum
 
-خروجی dist/hamgoo-live-chat-1.0.2.zip مستقیماً از پیشخوان وردپرس قابل نصب است. فقط کد و فایل‌های لازم برای اجرا در آن قرار می‌گیرند؛ vendor، تست‌ها، workflowها، مستندات توسعه و تصاویر مارکت حذف می‌شوند.
+خروجی dist/hamgoo-live-chat-1.0.3.zip مستقیماً از پیشخوان وردپرس قابل نصب است. فقط کد و فایل‌های لازم برای اجرا در آن قرار می‌گیرند؛ vendor، تست‌ها، workflowها، مستندات توسعه و تصاویر مارکت حذف می‌شوند.
 
 ترجمه‌های انگلیسی متن پایه‌اند. منبع نگهداری ترجمه‌ها languages/translations.json است. اسکریپت translations.py فایل‌های PO و MO و POT را تولید می‌کند و اگر متن جدید بدون ترجمه مانده باشد، شکست می‌خورد. ترجمه‌ها مربوط به افزونه‌اند و تغییری در زبان ویجت ابری نمی‌دهند.
 
@@ -42,7 +42,7 @@
 
 پروژه مخزن مستقل دارد؛ شاخه main به مخزن GitHub بالا متصل است. آن را داخل مخزن فرانت‌اند یا بک‌اند قرار ندهید.
 
-ci.yml بررسی PHP روی نسخه‌های ۷٫۴ و ۸٫۳، استاندارد وردپرس، قواعد، بارگذار، ترجمه، بسته و Plugin Check رسمی را اجرا می‌کند. برای Plugin Check، وردپرس دورریختنی با MySQL ساخته و ابزار رسمی از ZIP منبع WordPress.org نصب می‌شود؛ گزارش آن به‌عنوان artifact ذخیره می‌شود. تا وقتی Contributors خالی است، فقط هشدار readme_invalid_contributors در CI معمول مستثنا می‌شود و یادآوری آن در log ثبت می‌شود؛ سایر خطاها و هشدارها انتشار را متوقف می‌کنند. اجرای دستی CI با گزینه wordpress_org و workflow انتشار وردپرس، Contributors واقعی و بررسی کامل را لازم دارند.
+ci.yml بررسی PHP روی نسخه‌های ۷٫۴ و ۸٫۳، استاندارد وردپرس، قواعد، بارگذار، ترجمه، بسته و Plugin Check رسمی را اجرا می‌کند. برای Plugin Check، وردپرس دورریختنی با MySQL ساخته و ابزار رسمی از ZIP منبع WordPress.org نصب می‌شود؛ گزارش آن به‌عنوان artifact ذخیره می‌شود. Contributors نباید خالی باشد و همه خطاها و هشدارهای Plugin Check بررسی می‌شوند.
 
 برای نسخه جدید، Version در فایل اصلی، ثابت HAMGOO_VERSION و Stable tag در readme.txt باید یکسان باشند. Changelog و متادیتای Tested up to را با تست واقعی همان نسخه هماهنگ کنید؛ سپس commit و push و تگ vX.Y.Z را ارسال کنید.
 
@@ -54,9 +54,9 @@ ZIP قابل نصب hamgoo-live-chat-X.Y.Z.zip است؛ آرشیوهای خود�
 
 ## WordPress.org
 
-[گزارش تطبیق با فرم ارسال](wordpress-submission-review-fa.md) شامل وضعیت نام، مالکیت، Trialware، اسکریپت سرویس و پیش‌نیازهای باقی‌مانده است. ایمیل مالک در حساب باید info@hamkaran.cloud باشد؛ نام کاربری واقعی را جداگانه در Contributors وارد کنید.
+[گزارش تطبیق با فرم ارسال](wordpress-submission-review-fa.md) شامل وضعیت نام، مالکیت، Trialware، اسکریپت سرویس و پیش‌نیازهای باقی‌مانده است. مالک باید ایمیل و اختیار انتشار حساب را تأیید کند.
 
-1. حساب منتشرکننده را بسازید؛ نام کاربری واقعی را در Contributors بنویسید.
+1. دسترسی و ایمیل حساب منتشرکننده `hamika` را تأیید کنید.
 2. تصاویر نهایی و اسکرین‌شات‌های واقعی را اضافه کنید. بخش Screenshots در readme.txt را با عکس‌های موجود هماهنگ کنید.
 3. صحت صفحه توافق‌نامه و حریم خصوصی برای سرویس همگو و آدرس سرویس را بررسی کنید.
 4. Plugin Check رسمی و آزمون عملی نصب و ارسال پیام را انجام دهید. نتیجه مربوط به نسخه واقعی را در Tested up to ثبت کنید.

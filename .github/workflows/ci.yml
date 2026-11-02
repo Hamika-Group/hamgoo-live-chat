@@ -80,17 +80,10 @@ jobs:
         with:
           ref: ${{ inputs.ref || github.ref }}
       - name: Check publisher account prerequisite
-        id: listing
-        env:
-          STRICT_WORDPRESS: ${{ inputs.wordpress_org && 'true' || 'false' }}
         run: |
           if grep -Eq '^Contributors:[[:space:]]*$' readme.txt; then
-            if test "$STRICT_WORDPRESS" = true; then
-              echo "::error::Set the real WordPress.org publisher username in readme.txt before WordPress publication."
-              exit 1
-            fi
-            echo "::warning::WordPress.org publisher account is pending; exempting only readme_invalid_contributors."
-            echo "ignore_code=readme_invalid_contributors" >> "$GITHUB_OUTPUT"
+            echo "::error::Set the real WordPress.org publisher username in readme.txt."
+            exit 1
           fi
       - uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # 2.40.0
         with:
@@ -115,13 +108,8 @@ jobs:
           wp plugin install "$RUNNER_TEMP/plugin-check.zip" --activate --path="$WP_PATH"
           wp plugin install dist/hamgoo-live-chat-*.zip --activate --path="$WP_PATH"
       - name: Official Plugin Check on the installable package
-        env:
-          IGNORE_CODE: ${{ steps.listing.outputs.ignore_code }}
         run: |
           CHECK_ARGS=(--format=json --require="$WP_PATH/wp-content/plugins/plugin-check/cli.php")
-          if test -n "$IGNORE_CODE"; then
-            CHECK_ARGS+=("--ignore-codes=$IGNORE_CODE")
-          fi
           wp plugin check hamgoo-live-chat --path="$WP_PATH" "${CHECK_ARGS[@]}" \
             | tee "$RUNNER_TEMP/plugin-check-results.txt"
           python3 scripts/plugin-check-report.py "$RUNNER_TEMP/plugin-check-results.txt"

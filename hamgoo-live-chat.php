@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: Hamgoo Live Chat
- * Plugin URI: https://hamkaran.cloud/
+ * Plugin URI: https://github.com/Hamika-Group/hamgoo-live-chat
  * Description: Connect Hamgoo live chat with a widget key, choose where it appears, and control when it loads.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Requires at least: 6.5
  * Requires PHP: 7.4
  * Author: Hamkaran
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'HAMGOO_VERSION', '1.0.2' );
+define( 'HAMGOO_VERSION', '1.0.3' );
 define( 'HAMGOO_FILE', __FILE__ );
 define( 'HAMGOO_DIR', plugin_dir_path( __FILE__ ) );
 define( 'HAMGOO_URL', plugin_dir_url( __FILE__ ) );
