@@ -13,6 +13,6 @@ dist
 vendor
 node_modules
 README.md
-languages/translations.json
+languages
 *.pyc
 __pycache__

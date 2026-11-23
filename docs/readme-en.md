@@ -73,7 +73,7 @@ Read the [full external-service disclosure](../readme.txt), [privacy policy](htt
 
 ## Languages, artwork and removal
 
-The five translations apply to the plugin administration and local loading button. Configure cloud chat language, colors, position, welcome text and hours in Hamgoo.
+Approved WordPress language packs translate the plugin administration and local loading button. An explicit panel language falls back to English when its pack is unavailable. Configure cloud chat language, colors, position, welcome text and hours in Hamgoo.
 
 The local SVG artwork is temporary. See the [Persian artwork brief](artwork-fa.md) for WebP replacements and marketplace assets. Marketplace screenshots must show the actual plugin.
 

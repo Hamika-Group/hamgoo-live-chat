@@ -25,10 +25,6 @@ def package(tag=None):
     files = [ROOT / name for name in FILES]
     for name in DIRS:
         files.extend(p for p in (ROOT / name).rglob("*") if p.is_file())
-    files.extend(p for p in (ROOT / "languages").iterdir() if p.suffix in (".po", ".mo", ".pot"))
-    for locale in ("fa_IR", "ar", "ru_RU", "ur"):
-        if not (ROOT / ("languages/hamgoo-live-chat-" + locale + ".mo")).exists():
-            raise SystemExit("Missing runtime translation: " + locale)
     target = ROOT / "dist"
     target.mkdir(exist_ok=True)
     output = target / (SLUG + "-" + version + ".zip")

@@ -17,11 +17,11 @@
     python3 scripts/translations.py
     python3 scripts/verify.py
     python3 tests/package.test.py
-    python3 scripts/package.py --tag v1.0.3 --checksum
+    python3 scripts/package.py --tag v1.0.4 --checksum
 
-خروجی dist/hamgoo-live-chat-1.0.3.zip مستقیماً از پیشخوان وردپرس قابل نصب است. فقط کد و فایل‌های لازم برای اجرا در آن قرار می‌گیرند؛ vendor، تست‌ها، workflowها، مستندات توسعه و تصاویر مارکت حذف می‌شوند.
+خروجی dist/hamgoo-live-chat-1.0.4.zip مستقیماً از پیشخوان وردپرس قابل نصب است. ZIP شامل کد و فایل‌های لازم برای اجراست.
 
-ترجمه‌های انگلیسی متن پایه‌اند. منبع نگهداری ترجمه‌ها languages/translations.json است. اسکریپت translations.py فایل‌های PO و MO و POT را تولید می‌کند و اگر متن جدید بدون ترجمه مانده باشد، شکست می‌خورد. ترجمه‌ها مربوط به افزونه‌اند و تغییری در زبان ویجت ابری نمی‌دهند.
+متن پایهٔ افزونه انگلیسی است و منبع ترجمه‌ها `languages/translations.json` است. اسکریپت `translations.py` فایل‌های PO و MO و POT را برای نگهداری در گیت تولید می‌کند. پس از ایجاد پروژهٔ افزونه در `translate.wordpress.org`، فایل‌های PO را در بخش Stable زبان مربوط درون‌ریزی کنید. وردپرس بسته‌های زبان را پس از تأیید ترجمه‌ها توزیع می‌کند.
 
 ## بررسی دستی پیش از انتشار عمومی
 

@@ -8,12 +8,45 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class Admin {
+	private static $language;
+
 	public static function register() {
+		add_action( 'init', array( self::class, 'load_language' ), 0 );
 		add_action( 'admin_menu', array( self::class, 'menu' ) );
 		add_action( 'admin_init', array( self::class, 'settings' ) );
 		add_action( 'admin_enqueue_scripts', array( self::class, 'assets' ) );
 		add_action( 'wp_ajax_hamgoo_search_content', array( self::class, 'search' ) );
 		add_filter( 'plugin_action_links_' . plugin_basename( HAMGOO_FILE ), array( self::class, 'action_links' ) );
+	}
+
+	/** Apply an explicit language choice using the installed WordPress language pack. */
+	public static function load_language() {
+		if ( ! is_admin() ) {
+			return;
+		}
+		$locale = Settings::get()['admin_language'];
+		if ( 'auto' === $locale ) {
+			return;
+		}
+
+		$controller     = \WP_Translation_Controller::get_instance();
+		$pack           = WP_LANG_DIR . '/plugins/hamgoo-live-chat-' . $locale;
+		$loaded         = 'en_US' !== $locale && (
+			$controller->load_file( $pack . '.l10n.php', 'hamgoo-live-chat', $locale ) ||
+			$controller->load_file( $pack . '.mo', 'hamgoo-live-chat', $locale )
+		);
+		self::$language = $loaded ? $locale : 'en_US';
+
+		// Limit the override to this plugin's strings without switching the WordPress locale.
+		add_filter(
+			'gettext_hamgoo-live-chat',
+			static function ( $translation, $text ) use ( $controller, $locale, $loaded ) {
+				$translated = $loaded ? $controller->translate( $text, '', 'hamgoo-live-chat', $locale ) : false;
+				return false === $translated ? $text : $translated;
+			},
+			10,
+			2
+		);
 	}
 
 	public static function menu() {
@@ -151,7 +184,7 @@ class Admin {
 			return;
 		}
 		$s          = Settings::get();
-		$locale     = 'auto' === $s['admin_language'] ? determine_locale() : $s['admin_language'];
+		$locale     = self::$language ?? determine_locale();
 		$rtl        = (bool) preg_match( '/^(fa|ar|ur)(_|$)/', $locale );
 		$configured = Settings::valid_key( $s['widget_key'] ) && $s['service_consent'];
 		?>

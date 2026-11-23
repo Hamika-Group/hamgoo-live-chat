@@ -29,6 +29,6 @@ with zipfile.ZipFile(archive_path) as archive:
     names = archive.namelist()
     assert len(names) > 15
     assert not any("/vendor/" in name or "/tests/" in name or "/scripts/" in name or "/.github/" in name for name in names)
-    assert not any(name.endswith("translations.json") for name in names)
+    assert not any("/languages/" in name or name.endswith((".po", ".mo", ".pot", ".l10n.php")) for name in names)
     assert archive.read("hamgoo-live-chat/hamgoo-live-chat.php").startswith(b"<?php")
     print("Release ZIP: " + str(len(names)) + " runtime files; SHA256 " + digest)

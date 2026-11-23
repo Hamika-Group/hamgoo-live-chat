@@ -4,11 +4,11 @@ Tags: live chat, customer support, hamgoo, woocommerce, chat
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Connect Hamgoo chat with a widget key. Control pages, WooCommerce rules and loading. Includes Persian, English, Arabic, Russian and Urdu.
+Connect Hamgoo chat with a widget key. Control where chat appears and when it loads, including on WooCommerce pages.
 
 == Description ==
 
@@ -30,7 +30,7 @@ Features:
 * Connect using only the widget key; no account password or private API token.
 * A dedicated navy and blue administration page.
 * Bundled English source strings and complete Persian, Arabic, Russian and Urdu translations.
-* Plugin-only administration language selection, with RTL support.
+* Plugin-only administration language selection using installed WordPress language packs, with RTL support.
 * Include or exclude published pages and posts using content search.
 * Select public content types, homepage, blog index, archives, search and 404 pages.
 * Optional WooCommerce rules for shop, products, product archives, cart, checkout and account.
@@ -78,7 +78,7 @@ The check may be blocked by browser privacy settings or CORS; a successful respo
 Service: https://hamkaran.cloud/
 Service privacy policy: https://hamkaran.cloud/privacy-policy/
 Service agreement: https://hamkaran.cloud/%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D9%86%D8%A7%D9%85%D9%87-%D8%A7%D9%85%D9%86%DB%8C%D8%AA%DB%8C/
-Realtime client privacy information: https://pusher.com/legal/privacy-policy/
+Pusher realtime client privacy policy (Bird): https://bird.com/legal/privacy
 
 == Installation ==
 
@@ -111,7 +111,7 @@ No. WooCommerce-specific choices appear when WooCommerce is active. Other rules 
 = Can the WordPress plugin change the chat design or translate the chat? =
 
 Chat appearance, welcome text, position, opening behavior, response hours and remote language capabilities are managed by Hamgoo.
-The plugin translations apply to its settings, guidance and local loading button.
+The plugin translations apply to its settings, guidance and local loading button. WordPress supplies approved translations through its language packs. If the pack for a language selected in the Hamgoo settings is unavailable, the panel displays English.
 
 = Does click mode open the conversation immediately? =
 
@@ -145,6 +145,11 @@ Preserve the configured loading and consent rules. The theme must use wp_head() 
 
 == Changelog ==
 
+= 1.0.4 =
+
+* Update the Pusher privacy policy link.
+* Use WordPress language packs for plugin translations.
+
 = 1.0.3 =
 
 * Correct plugin and author links and identify the WordPress.org contributor.
@@ -166,6 +171,10 @@ Preserve the configured loading and consent rules. The theme must use wp_head() 
 * Optional consent integration, setup guide and privacy disclosure.
 
 == Upgrade Notice ==
+
+= 1.0.4 =
+
+Translations are supplied through WordPress language packs. Update translations in the WordPress dashboard when they become available.
 
 = 1.0.3 =
 

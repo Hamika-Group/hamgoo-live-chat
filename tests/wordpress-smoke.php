@@ -17,6 +17,9 @@ if ( ! defined( 'WP_CLI' ) || ! WP_CLI ) {
 if ( ! class_exists( Settings::class ) ) {
 	WP_CLI::error( 'Activate Hamgoo Live Chat first.' );
 }
+if ( ! WP_DEBUG ) {
+	WP_CLI::error( 'Enable WP_DEBUG in the disposable WordPress installation.' );
+}
 
 $GLOBALS['hamgoo_smoke_checks'] = 0;
 function hamgoo_assert( $value, $message ) {
@@ -30,21 +33,42 @@ require_once ABSPATH . 'wp-admin/includes/admin.php';
 wp_set_current_user( 1 );
 set_current_screen( 'toplevel_page_hamgoo-live-chat' );
 $catalog = json_decode( file_get_contents( __DIR__ . '/../languages/translations.json' ), true );
+$domain_hook = 'gettext_hamgoo-live-chat';
+$pack_directory = WP_LANG_DIR . '/plugins';
+$locales = array( 'fa_IR', 'ar', 'ru_RU', 'ur' );
+$source = 'Connect & start';
+$wordpress_locale = WP_Translation_Controller::get_instance()->get_locale();
 
-foreach ( array( 'en_US', 'fa_IR', 'ar', 'ru_RU', 'ur' ) as $locale ) {
+// Start without any plugin language packs, as on a fresh installation.
+$options = Settings::defaults();
+$options['admin_language'] = 'fa_IR';
+update_option( Settings::OPTION, $options );
+Admin::load_language();
+hamgoo_assert( __( $source, 'hamgoo-live-chat' ) === $source, 'Missing language pack falls back to English.' );
+remove_all_filters( $domain_hook );
+
+wp_mkdir_p( $pack_directory );
+foreach ( $locales as $locale ) {
+	$name = 'hamgoo-live-chat-' . $locale . '.mo';
+	$destination = $pack_directory . '/' . $name;
+	hamgoo_assert( ! file_exists( $destination ) && copy( __DIR__ . '/../languages/' . $name, $destination ), 'Stage language pack: ' . $locale );
+}
+
+foreach ( array_merge( array( 'en_US' ), $locales ) as $locale ) {
 	$options                   = Settings::defaults();
 	$options['admin_language'] = $locale;
 	update_option( Settings::OPTION, $options );
-	unload_textdomain( 'hamgoo-live-chat', true );
-	Hamgoo\LiveChat\translations();
-	$expected = 'en_US' === $locale ? 'Connect & start' : $catalog['Connect & start'][ $locale ];
-	hamgoo_assert( __( 'Connect & start', 'hamgoo-live-chat' ) === $expected, 'Real WordPress translation: ' . $locale );
+	Admin::load_language();
+	$expected = 'en_US' === $locale ? $source : $catalog[ $source ][ $locale ];
+	hamgoo_assert( __( $source, 'hamgoo-live-chat' ) === $expected, 'Real WordPress translation: ' . $locale );
+	hamgoo_assert( WP_Translation_Controller::get_instance()->get_locale() === $wordpress_locale, 'The admin choice preserves the WordPress locale.' );
 	ob_start();
 	Admin::render();
 	$html = ob_get_clean();
 	hamgoo_assert( false !== strpos( $html, 'id="hg-settings-form"' ), 'Real admin render: ' . $locale );
 	hamgoo_assert( false !== strpos( $html, esc_html( $expected ) ), 'Translated admin render: ' . $locale );
 	hamgoo_assert( false !== strpos( $html, 'wpnonce' ), 'Settings API nonce is present.' );
+	remove_all_filters( $domain_hook );
 }
 
 Admin::settings();
@@ -81,4 +105,7 @@ hamgoo_assert( Rules::allows( $s, Rules::current_context() ), 'Published post ac
 wp_delete_post( $page, true );
 wp_delete_post( $post, true );
 delete_option( Settings::OPTION );
+foreach ( $locales as $locale ) {
+	unlink( $pack_directory . '/hamgoo-live-chat-' . $locale . '.mo' );
+}
 WP_CLI::success( $GLOBALS['hamgoo_smoke_checks'] . ' real WordPress assertions.' );
